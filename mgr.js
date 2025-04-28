@@ -2,17 +2,18 @@ define(['managerAPI',
 		'https://cdn.jsdelivr.net/gh/minnojs/minno-datapipe@1.*/datapipe.min.js'], function(Manager, {init_data_pipe, uploading_task}){
 
 
-	//You can use the commented-out code to get parameters from the URL.
-	//const queryString = window.location.search;
+    //You can use the commented-out code to get parameters from the URL.
+    //const queryString = window.location.search;
     //const urlParams = new URLSearchParams(queryString);
     //const pt = urlParams.get('pt');
 
-	var API    = new Manager();
-	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
-	init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv', comment: 'Bias Study'});	
+    var API    = new Manager();
+    //const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);	
 
     API.setName('mgr');
     API.addSettings('skip',true);
+
+    init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv', comment: 'Bias Study'});	
 
     //Randomly select which of two sets of category labels to use.
     let raceSet = API.shuffle(['a','b'])[0];
