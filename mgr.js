@@ -1,5 +1,5 @@
 define(['managerAPI',
-		'https://cdn.jsdelivr.net/gh/minnojs/minno-datapipe@1.*/datapipe.min.js'], function(Manager, {init_data_pipe, uploading_task}){
+		'https://cdn.jsdelivr.net/gh/minnojs/minno-datapipe@1.*/datapipe.min.js'], function(Manager){
 
 
     //You can use the commented-out code to get parameters from the URL.
@@ -9,7 +9,7 @@ define(['managerAPI',
 
     	var API    = new Manager();
     	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
-    	init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv', comment: 'Bias Study'});
+    	init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv'});
 
     API.setName('mgr');
     API.addSettings('skip',true);	
