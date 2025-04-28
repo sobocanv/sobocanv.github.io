@@ -9,7 +9,20 @@ define(['managerAPI',
 
 	var API    = new Manager();
 	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
-	init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv'});	
+	init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv'});
+
+	fetch("https://pipe.jspsych.org/api/data/", {
+  		method: "POST",
+  		headers: {
+    			"Content-Type": "application/json",
+    			Accept: "*/*",
+  		},
+  		body: JSON.stringify({
+    		experimentID: "N1NLIFf6LdYh",
+    		filename: "UNIQUE_FILENAME.csv",
+    		data: dataAsString,
+  		}),
+	});
 
     API.setName('mgr');
     API.addSettings('skip',true);
