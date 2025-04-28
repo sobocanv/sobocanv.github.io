@@ -176,15 +176,5 @@ define(['managerAPI',
         {inherit: 'redirect'}
     ]);
 
-    // Trigger DataPipe to automatically save the data at the end
-    API.addSequence([
-        {
-		type: 'script',
-            	script: function() {
-                API.save();  // Saves data to DataPipe at the end
-            	}
-        }
-    ]);
-
     return API.script;
 });
