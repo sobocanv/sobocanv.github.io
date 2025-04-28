@@ -7,9 +7,15 @@ define(['managerAPI',
     //const urlParams = new URLSearchParams(queryString);
     //const pt = urlParams.get('pt');
 
+<<<<<<< HEAD
     	var API    = new Manager();
     	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
     	init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv'});
+=======
+	var API    = new Manager();
+	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
+	init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv'});
+>>>>>>> parent of d3ab708 (Update mgr.js)
 
     API.setName('mgr');
     API.addSettings('skip',true);	
