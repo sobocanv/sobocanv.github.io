@@ -11,7 +11,8 @@ define(['managerAPI',
 	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
 	API.addSettings('onStart', function(){
 		init_data_pipe(API, 'N1NLIFf6LdYh', {file_type: 'csv'});
-	});	
+	});
+	console.log("Data pipe initialized.");
 
     API.setName('mgr');
     API.addSettings('skip',true);
