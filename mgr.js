@@ -8,12 +8,11 @@ define(['managerAPI',
     //const pt = urlParams.get('pt');
 
     var API    = new Manager();
-    //const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);	
+    //const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
+    init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv', comment: 'Bias Study'});
 
     API.setName('mgr');
-    API.addSettings('skip',true);
-
-    init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv', comment: 'Bias Study'});	
+    API.addSettings('skip',true);	
 
     //Randomly select which of two sets of category labels to use.
     let raceSet = API.shuffle(['a','b'])[0];
