@@ -11,19 +11,6 @@ define(['managerAPI',
 	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
 	init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv'});
 
-	fetch("https://pipe.jspsych.org/api/data/", {
-  		method: "POST",
-  		headers: {
-    			"Content-Type": "application/json",
-    			Accept: "*/*",
-  		},
-  		body: JSON.stringify({
-    		experimentID: "N1NLIFf6LdYh",
-    		filename: "UNIQUE_FILENAME.csv",
-    		data: dataAsString,
-  		}),
-	});
-
     API.setName('mgr');
     API.addSettings('skip',true);
 
@@ -188,6 +175,16 @@ define(['managerAPI',
         {inherit: 'lastpage'},
         {inherit: 'redirect'}
     ]);
+
+	// Trigger DataPipe to automatically save the data at the end
+	API.addSequence([
+        	{
+            		type: 'script',
+            		script: function() {
+                	API.save();  // Saves data to DataPipe at the end
+            		}
+        	}
+    	]);
 
     return API.script;
 });
