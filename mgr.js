@@ -13,6 +13,10 @@ define(['managerAPI',
 		init_data_pipe(API, 'N1NLIFf6LdYh', {file_type: 'csv'});
 	});
 
+    API.addSettings('onEnd', function(){
+        API.save();
+    });
+
     API.setName('mgr');
     API.addSettings('skip',true);
 
