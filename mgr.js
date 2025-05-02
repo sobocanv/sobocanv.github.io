@@ -4,18 +4,18 @@ define(['managerAPI',
 
 	//You can use the commented-out code to get parameters from the URL.
 	//const queryString = window.location.search;
-    //const urlParams = new URLSearchParams(queryString);
-    //const pt = urlParams.get('pt');
+    	//const urlParams = new URLSearchParams(queryString);
+    	//const pt = urlParams.get('pt');
 
-	var API    = new Manager();
+	var API = new Manager();
 	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
 	API.addSettings('onStart', function(){
 		init_data_pipe(API, 'N1NLIFf6LdYh', {file_type: 'csv'});
 	});
 
-    API.addSettings('onEnd', function(){
-        API.save();
-    });
+    	API.addSettings('onEnd', function(){
+        	API.save();
+    	});
 
     API.setName('mgr');
     API.addSettings('skip',true);
@@ -116,7 +116,7 @@ define(['managerAPI',
         }],
 		
 		//This task waits until the data are sent to the server.
-        uploading: uploading_task({header: 'just a moment', body:'Please wait, sending data... '})
+        uploading: uploading_task({header: 'Samo trenutek', body:'Prosimo počakajte, podatki se shranjujejo.'})
     });
 
     API.addSequence([
