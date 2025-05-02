@@ -11,6 +11,7 @@ define(['managerAPI',
 	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
 	API.addSettings('onStart', function(){
 		init_data_pipe(API, 'N1NLIFf6LdYh', {file_type: 'csv'});
+		console.log("DataPipe initialized");  // Check initialization
 	});
 
     	API.addSettings('onEnd', function(){
@@ -181,6 +182,13 @@ define(['managerAPI',
         {inherit: 'lastpage'},
         {inherit: 'redirect'}
     ]);
+
+    minnoJS.onEnd = function () {
+    	setTimeout(function() {
+        	console.log("Data at the end of the experiment: ", API.getData());  // Log the data when experiment ends
+        	proceed();
+    	}, 100);
+    };
 
     return API.script;
 });
