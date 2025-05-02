@@ -16,6 +16,7 @@ define(['managerAPI',
 
     	API.addSettings('onEnd', function(){
         	API.save();
+		console.log("Data is being saved");  // Checks for data
     	});
 
     API.setName('mgr');
@@ -182,13 +183,6 @@ define(['managerAPI',
         {inherit: 'lastpage'},
         {inherit: 'redirect'}
     ]);
-
-    minnoJS.onEnd = function () {
-    	setTimeout(function() {
-        	console.log("Data at the end of the experiment: ", API.getData());  // Log the data when experiment ends
-        	proceed();
-    	}, 100);
-    };
 
     return API.script;
 });
