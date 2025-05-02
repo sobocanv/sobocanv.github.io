@@ -102,10 +102,10 @@ define(['managerAPI',
             type: 'message',
             name: 'lastpage',
             templateUrl: 'lastpage.jst',
-            title: 'End',
+            title: 'Konec',
             //Uncomment the following if you want to end the study here.
             //last:true, 
-            header: 'You have completed the study'
+            header: 'Raziskavo ste uspešno končali'
         }], 
         
         //Use if you want to redirect the participants elsewhere at the end of the study
