@@ -32,7 +32,7 @@ define(['managerAPI',
     let foreignNames = API.shuffle(['Amir', 'Fatima', 'Jusuf', 'Emina', 'Dino', 'Selma', 'Mirza', 'Armin']);
 
     API.addGlobal({
-        //raceiat:{},
+        raceiat:{},
         //YBYB: change when copying back to the correct folder
         //baseURL: './images/',
         //raceSet:raceSet,
