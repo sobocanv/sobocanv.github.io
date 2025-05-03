@@ -4,37 +4,39 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
 
     return iatExtension({
         category1 : {
-            name : global.blackLabels, //Will appear in the data.
+            name : global.localLabels, //Will appear in the data.
             title : {
-                media : {word : global.blackLabels}, //Name of the category presented in the task.
+                media : {word : global.localLabels}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {image: 'bm1_nc.jpg'},
-                {image: 'bm2_nc.jpg'},
-                {image: 'bm3_nc.jpg'},
-                {image: 'bf1_nc.jpg'},
-                {image: 'bf2_nc.jpg'},                 
-                {image: 'bf3_nc.jpg'}     
+                {word: global.slovenianlNames[0]},
+                {word: global.slovenianNames[1]},
+                {word: global.slovenianNames[2]},
+                {word: global.slovenianNames[3]},
+                {word: global.slovenianNames[4]},
+                {word: global.slovenianNames[5]},
+                {word: global.slovenianNames[6]},
+                {word: global.slovenianNames[7]}
             ],
             //Stimulus css (style)
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },    
         category2 : {
-            name : global.whiteLabels, //Will appear in the data.
+            name : global.foreignLabels, //Will appear in the data.
             title : {
-                media : {word : global.whiteLabels}, //Name of the category presented in the task.
+                media : {word : global.foreignLabels}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {image: 'wm1_nc.jpg'},
-                {image: 'wm2_nc.jpg'},
-                {image: 'wm3_nc.jpg'},
-                {image: 'wf1_nc.jpg'},
-                {image: 'wf2_nc.jpg'},
-                {image: 'wf3_nc.jpg'}
+                {word: global.foreignNames[0]},
+                {word: global.foreignNames[1]},
+                {word: global.foreignNames[2]},
+                {word: global.foreignNames[3]},
+                {word: global.foreignNames[4]},
+                {word: global.foreignNames[5]}
             ],
             //Stimulus css (style)
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
@@ -42,7 +44,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
         attribute1 : {
             name : 'Bad words',
             title : {
-                media : {word : 'Bad words'},
+                media : {word : 'Slabe besede'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
@@ -62,7 +64,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
         attribute2 : {
             name : 'Good words',
             title : {
-                media : {word : 'Good words'},
+                media : {word : 'Dobre besede'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
