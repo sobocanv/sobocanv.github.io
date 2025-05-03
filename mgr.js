@@ -15,25 +15,32 @@ define(['managerAPI',
     API.addSettings('skip',true);
 
     //Randomly select which of two sets of category labels to use.
-    let raceSet = API.shuffle(['a','b'])[0];
-    let blackLabels = [];
-    let whiteLabels = [];
+    let groupSet = API.shuffle(['a','b'])[0];
+    let localLabels = [];
+    let foreignLabels = [];
 
-    if (raceSet == 'a') {
-        blackLabels.push('African Americans');
-        whiteLabels.push('European Americans');
+    if (groupSet == 'a') {
+        localLabels.push('Slovenci');
+        foreignLabels.push('Tujci');
     } else {
-        blackLabels.push('Black people');
-        whiteLabels.push('White people');
+        localLabels.push('Slovenski ljudje');
+        foreignLabels.push('Ljudje iz tujine');
     }
 
+    // Define names (you can expand these lists)
+    let slovenianNames = API.shuffle(['Ana', 'Matej', 'Tina', 'Luka', 'Nina', 'Marko', 'Petra', 'Gregor']);
+    let foreignNames = API.shuffle(['Amir', 'Fatima', 'Jusuf', 'Emina', 'Dino', 'Selma', 'Mirza', 'Armin']);
+
     API.addGlobal({
-        raceiat:{},
+        //raceiat:{},
         //YBYB: change when copying back to the correct folder
-        baseURL: './images/',
-        raceSet:raceSet,
-        blackLabels:blackLabels,
-        whiteLabels:whiteLabels,
+        //baseURL: './images/',
+        //raceSet:raceSet,
+        localLabels:localLabels,
+        foreignLabels:foreignLabels,
+	slovenianNames:slovenianNames,
+	foreignNames:foreignNames,
+	groupSet:groupSet
         //Select randomly what attribute words to see. 
         //Based on Axt, Feng, & Bar-Anan (2021).
         posWords : API.shuffle([
@@ -61,23 +68,23 @@ define(['managerAPI',
     API.addTasksSet({
         instructions: [{
             type: 'message',
-            buttonText: 'Continue'
+            buttonText: 'Nadaljuj'
         }],
 
         intro: [{
             inherit: 'instructions',
             name: 'intro',
             templateUrl: 'intro.jst',
-            title: 'Intro',
-            header: 'Welcome'
+            title: 'Uvod',
+            header: 'Dobrodošli'
         }],
 
         raceiat_instructions: [{
             inherit: 'instructions',
             name: 'raceiat_instructions',
             templateUrl: 'raceiat_instructions.jst',
-            title: 'IAT Instructions',
-            header: 'Implicit Association Test'
+            title: 'Navodila',
+            header: 'Implicitni test'
         }],
 
         explicits: [{
@@ -96,10 +103,10 @@ define(['managerAPI',
             type: 'message',
             name: 'lastpage',
             templateUrl: 'lastpage.jst',
-            title: 'End',
+            title: 'Konec',
             //Uncomment the following if you want to end the study here.
             //last:true, 
-            header: 'You have completed the study'
+            header: 'Dokončali ste raziskavo'
         }], 
         
         //Use if you want to redirect the participants elsewhere at the end of the study
@@ -110,13 +117,13 @@ define(['managerAPI',
         }],
 		
 		//This task waits until the data are sent to the server.
-        uploading: uploading_task({header: 'just a moment', body:'Please wait, sending data... '})
+        uploading: uploading_task({header: 'Samo trenutek', body:'Prosimo počakajte, pošiljanje podatkov ...'})
     });
 
     API.addSequence([
         { type: 'isTouch' }, //Use Minno's internal touch detection mechanism. 
         
-        { type: 'post', path: ['$isTouch', 'raceSet', 'blackLabels', 'whiteLabels'] },
+        { type: 'post', path: ['$isTouch', 'groupSet', 'localLabels', 'foreignLabels'] },
 
         // apply touch only styles
         {
