@@ -36,7 +36,9 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
                 {word: global.foreignNames[2]},
                 {word: global.foreignNames[3]},
                 {word: global.foreignNames[4]},
-                {word: global.foreignNames[5]}
+                {word: global.foreignNames[5]},
+                {word: global.foreignNames[6]},
+                {word: global.foreignNames[7]}
             ],
             //Stimulus css (style)
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
