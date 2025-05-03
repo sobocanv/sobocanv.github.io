@@ -68,26 +68,26 @@ define(['questAPI'], function(Quest){
         name: 'attributes7',
         stem: 'Katera izjava vas najbolje opisuje?',
         answers: [
-            {text:'Močno raje imam <%= global.whiteLabels %> kot <%= global.blackLabels %>.',value:7},
-            {text:'Zmerno raje imam <%= global.whiteLabels %> kot <%= global.blackLabels %>.',value:6},
-            {text:'Nekoliko raje imam <%= global.whiteLabels %> kot <%= global.blackLabels %>.',value:5},
-            {text:'Enako rad imam <%= global.whiteLabels %> in <%= global.blackLabels %>.',value:4},
-            {text:'Nekoliko raje imam <%= global.blackLabels %> kot <%= global.whiteLabels %>.',value:3},
-            {text:'Zmerno raje imam <%= global.blackLabels %> kot <%= global.whiteLabels %>.',value:2},
-            {text:'Močno raje imam <%= global.blackLabels %> kot <%= global.whiteLabels %>.',value:1}
+            {text:'Močno raje imam <%= global.foreignLabels %> kot <%= global.localLabels %>.',value:7},
+            {text:'Zmerno raje imam <%= global.foreignLabels %> kot <%= global.localLabels %>.',value:6},
+            {text:'Nekoliko raje imam <%= global.foreignLabels %> kot <%= global.localLabels %>.',value:5},
+            {text:'Enako rad imam <%= global.foreignLabels %> in <%= global.localLabels %>.',value:4},
+            {text:'Nekoliko raje imam <%= global.localLabels %> kot <%= global.foreignLabels %>.',value:3},
+            {text:'Zmerno raje imam <%= global.localLabels %> kot <%= global.foreignLabels %>.',value:2},
+            {text:'Močno raje imam <%= global.localLabels %> kot <%= global.foreignLabels %>.',value:1}
         ]
     });
 	
     API.addQuestionsSet('thermBlack',{
         inherit : 'therm',
         name: 'Tblack_0to10',
-        stem: 'Kako toplo ali hladno se počutite do <b><%= global.blackLabels %></b>?'
+        stem: 'Kako toplo ali hladno se počutite do <b><%= global.localLabels %></b>?'
     });
 
     API.addQuestionsSet('thermWhite',{
         inherit : 'therm',
         name: 'Twhite_0to10',
-        stem: 'Kako toplo ali hladno se počutite do <b><%= global.whiteLabels %></b>?'
+        stem: 'Kako toplo ali hladno se počutite do <b><%= global.foreignLabels %></b>?'
     });
 
     API.addSequence([
