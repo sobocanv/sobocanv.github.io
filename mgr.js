@@ -27,20 +27,23 @@ define(['managerAPI',
         foreignLabels.push('Ljudje iz tujine');
     }
 
-    // Define names (you can expand these lists)
-    let slovenianNames = API.shuffle(['Ana', 'Matej', 'Tina', 'Luka', 'Nina', 'Marko', 'Petra', 'Gregor']);
-    let foreignNames = API.shuffle(['Amir', 'Fatima', 'Jusuf', 'Emina', 'Dino', 'Selma', 'Mirza', 'Armin']);
-
     API.addGlobal({
         raceiat:{},
         //YBYB: change when copying back to the correct folder
         //baseURL: './images/',
         //raceSet:raceSet,
+	groupSet:groupSet,
         localLabels:localLabels,
         foreignLabels:foreignLabels,
-	slovenianNames:slovenianNames,
-	foreignNames:foreignNames,
-	groupSet:groupSet,
+	//Select randomly what name to see.
+	slovenianNames: API.shuffle([
+	    'Ana', 'Matej', 'Tina', 'Luka',
+	    'Nina', 'Marko', 'Petra', 'Gregor'
+	]),
+    	foreignNames: API.shuffle([
+	    'Amir', 'Fatima', 'Jusuf', 'Emina',
+	    'Dino', 'Selma', 'Mirza', 'Armin'
+	]),
         //Select randomly what attribute words to see. 
         //Based on Axt, Feng, & Bar-Anan (2021).
         posWords : API.shuffle([
