@@ -11,7 +11,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {word: global.slovenianlNames[0]},
+                {word: global.slovenianNames[0]},
                 {word: global.slovenianNames[1]},
                 {word: global.slovenianNames[2]},
                 {word: global.slovenianNames[3]},
