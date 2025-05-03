@@ -9,7 +9,7 @@ define(['questAPI'], function(Quest){
         noSubmit:false, //Change to true if you don't want to show the submit button.
         header: 'Vprašalnik',
         decline: true,
-        declineText: isTouch ? 'Ne' : 'Nočem odgovoriti', 
+        declineText: isTouch ? 'Preskoči' : 'Nočem odgovoriti', 
         autoFocus:true, 
         progressBar:  'Stran <%= pagesMeta.number %> od 3'
     });
@@ -22,7 +22,7 @@ define(['questAPI'], function(Quest){
         required : true, 		
         errorMsg: {
             required: isTouch 
-                ? 'Prosimo, izberite ustrezni odgovor ali pritisnite na gumb \'Ne\'' 
+                ? 'Prosimo, izberite ustrezni odgovor ali pritisnite na gumb \'Preskoči\'' 
                 : 'Prosimo, izberite ustrezni odgovor ali pritisnite na gumb \'Nočem odgovoriti\''
         },
         autoSubmit:'true',
@@ -78,15 +78,15 @@ define(['questAPI'], function(Quest){
         ]
     });
 	
-    API.addQuestionsSet('thermBlack',{
+    API.addQuestionsSet('thermLocal',{
         inherit : 'therm',
-        name: 'Tblack_0to10',
+        name: 'Tlocal_0to10',
         stem: 'Kako toplo ali hladno se počutite do <b><%= global.localLabels %></b>?'
     });
 
-    API.addQuestionsSet('thermWhite',{
+    API.addQuestionsSet('thermForeign',{
         inherit : 'therm',
-        name: 'Twhite_0to10',
+        name: 'Tforeign_0to10',
         stem: 'Kako toplo ali hladno se počutite do <b><%= global.foreignLabels %></b>?'
     });
 
@@ -100,11 +100,11 @@ define(['questAPI'], function(Quest){
                     data : [
                         {
                             inherit:'basicPage', 
-                            questions: {inherit:'thermBlack'}
+                            questions: {inherit:'thermLocal'}
                         },
                         {
                             inherit:'basicPage', 
-                            questions: {inherit:'thermWhite'}							
+                            questions: {inherit:'thermForeign'}							
                         }
                     ]
                 },
