@@ -40,7 +40,7 @@ define(['managerAPI',
         foreignLabels:foreignLabels,
 	slovenianNames:slovenianNames,
 	foreignNames:foreignNames,
-	groupSet:groupSet
+	groupSet:groupSet,
         //Select randomly what attribute words to see. 
         //Based on Axt, Feng, & Bar-Anan (2021).
         posWords : API.shuffle([
