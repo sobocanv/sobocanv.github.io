@@ -46,7 +46,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
         attribute1 : {
             name : 'Bad words',
             title : {
-                media : {word : 'Slabe besede'},
+                media : {word : 'Bad words'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
@@ -66,7 +66,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
         attribute2 : {
             name : 'Good words',
             title : {
-                media : {word : 'Dobre besede'},
+                media : {word : 'Good words'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
@@ -83,9 +83,9 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             //Stimulus css
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
         },
-        base_url : {//Where are your images at?
-            image : global.baseURL
-        },
+        //base_url : {//Where are your images at?
+            //image : global.baseURL
+        //},
         isTouch : global.$isTouch
     });
 });
