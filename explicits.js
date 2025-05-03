@@ -7,9 +7,9 @@ define(['questAPI'], function(Quest){
 	*/
     API.addPagesSet('basicPage',{
         noSubmit:false, //Change to true if you don't want to show the submit button.
-        header: 'Vprašalnik',
+        header: 'Questionnaire',
         decline: true,
-        declineText: isTouch ? 'Ne' : 'Nočem odgovoriti', 
+        declineText: isTouch ? 'Decline' : 'Decline to Answer', 
         autoFocus:true, 
         progressBar:  'Page <%= pagesMeta.number %> out of 3'
     });
@@ -22,13 +22,13 @@ define(['questAPI'], function(Quest){
         required : true, 		
         errorMsg: {
             required: isTouch 
-                ? 'Prosimo, izberite najbolj ustrezen odgovor ali pritisnite na \'Ne\'' 
-                : 'Prosimo, izbreite najbolj ustrezen odgovor ali pritisnite na \'Nočem odgovoriti\''
+                ? 'Please select an answer, or click \'Decline\'' 
+                : 'Please select an answer, or click \'Decline to Answer\''
         },
         autoSubmit:'true',
         numericValues:'true',
         help: '<%= pagesMeta.number < 3 %>',
-        helpText: 'Nasvet: Za hitrejše reševanje kliknite na izbrani odgovor dvakrat.'
+        helpText: 'Tip: For quick response, click to select your answer, and then click again to submit.'
     });
 
     API.addQuestionsSet('basicSelect',{
@@ -66,7 +66,7 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('attributes7',{
         inherit : 'basicSelect',
         name: 'attributes7',
-        stem: 'Katera izjava vas najbolje opisuje?',
+        stem: 'Which statement best describes you?',
         answers: [
             {text:'I strongly prefer <%= global.whiteLabels %> to <%= global.blackLabels %>.',value:7},
             {text:'I moderately prefer <%= global.whiteLabels %> to <%= global.blackLabels %>.',value:6},

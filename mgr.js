@@ -4,20 +4,12 @@ define(['managerAPI',
 
 	//You can use the commented-out code to get parameters from the URL.
 	//const queryString = window.location.search;
-    	//const urlParams = new URLSearchParams(queryString);
-    	//const pt = urlParams.get('pt');
+    //const urlParams = new URLSearchParams(queryString);
+    //const pt = urlParams.get('pt');
 
-	var API = new Manager();
+	var API    = new Manager();
 	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
-	API.addSettings('onStart', function(){
-		init_data_pipe(API, 'N1NLIFf6LdYh', {file_type: 'csv'});
-		console.log("DataPipe initialized");  // Check initialization
-	});
-
-    	API.addSettings('onEnd', function(){
-        	API.save();
-		console.log("Data is being saved");  // Checks for data
-    	});
+	init_data_pipe(API, 'zpjKaPesdEOI',  {file_type:'csv'});	
 
     API.setName('mgr');
     API.addSettings('skip',true);
@@ -104,10 +96,10 @@ define(['managerAPI',
             type: 'message',
             name: 'lastpage',
             templateUrl: 'lastpage.jst',
-            title: 'Konec',
+            title: 'End',
             //Uncomment the following if you want to end the study here.
             //last:true, 
-            header: 'Raziskavo ste uspešno končali'
+            header: 'You have completed the study'
         }], 
         
         //Use if you want to redirect the participants elsewhere at the end of the study
@@ -118,7 +110,7 @@ define(['managerAPI',
         }],
 		
 		//This task waits until the data are sent to the server.
-        uploading: uploading_task({header: 'Samo trenutek', body:'Prosimo počakajte, podatki se shranjujejo.'})
+        uploading: uploading_task({header: 'just a moment', body:'Please wait, sending data... '})
     });
 
     API.addSequence([

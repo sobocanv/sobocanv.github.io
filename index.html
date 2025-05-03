@@ -1,9 +1,10 @@
 <html>
     <head>
-	<script src="https://cdn.jsdelivr.net/gh/minnojs/minno-datapipe@1.*/datapipe.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/main.css" />
+		<style type="text/css">
+        .container {padding-top: 15px;}
+		</style>
 	
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/main.css" />
-	    
         <script>
             // load MinnoJS from the CDN (you probably don't need to change this)
             var scriptTag                = document.createElement('script');
@@ -30,6 +31,9 @@
                 
                 // Run your study (just set the correct URL)
                 minnoJS(canvas, 'mgr.js');
+                
+                // We need to wait a few miliseconds for Qualtrics to register the value that we entered
+                minnoJS.onEnd = function () { setTimeout(proceed, 100); }
             }
         </script>
     </head>
