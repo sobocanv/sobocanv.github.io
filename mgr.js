@@ -90,6 +90,12 @@ define(['managerAPI',
             header: 'Implicitni test'
         }],
 
+	demographics: [{
+            type: 'quest',
+            name: 'demographics',
+            scriptUrl: 'demographics.js'
+        }],
+
         explicits: [{
             type: 'quest',
             name: 'explicits',
@@ -165,6 +171,7 @@ define(['managerAPI',
         
         
         {inherit: 'intro'},
+	{inherit: 'demographics'},
         {
             mixer:'random',
             data:[
