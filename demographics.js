@@ -164,7 +164,7 @@ define(['questAPI'], function(Quest){
 	    ]
         });
 	
-        API.addQuestionsSet('gedner_Identity', {
+        API.addQuestionsSet('gender_Identity', {
 		inherit:'basicSelect',
 		name:'gender_Identity',
 		stem:'What is your gender identity?',
