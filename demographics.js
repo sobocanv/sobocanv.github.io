@@ -11,7 +11,7 @@ define(['questAPI'], function(Quest){
         decline: true,
         declineText: isTouch ? 'Decline' : 'Decline to Answer', 
         autoFocus:true, 
-        progressBar: 'Page <%= pagesMeta.number %> out of <%= pagesMeta.count %>'
+        progressBar: 'Page <%= pagesMeta.number %> out of 5'
     });
 
     /**
