@@ -179,12 +179,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Levi prst postavite na tipko <b>E</b> za elemente, ki spadajo v kategorijo <font color="#0000ff">leftAttribute.</font>' +
-				'<br/>Desni prst postavite na tipko <b>I</b> za elemente, ki spadajo v kategorijo <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
-				'Če naredite napako, se prikaže rdeč <font color="#ff0000"><b>X</b></font> . ' +
-				'Za nadaljevanje pritisnite drugo tipko.<br/>' +
-				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>'+
-				'<p align="center">Pritisnite <b>space bar</b> , ko ste pripravljeni.</font></p></div>',
+				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
+				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
+				'Press the other key to continue.<br/>' +
+				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
+				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
 			instAttributePracticeTouch: [
 				'<div>',
 					'<p align="center">',
