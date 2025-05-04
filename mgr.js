@@ -3,13 +3,16 @@ define(['managerAPI',
 
 
 	//You can use the commented-out code to get parameters from the URL.
-	//const queryString = window.location.search;
-    //const urlParams = new URLSearchParams(queryString);
-    //const pt = urlParams.get('pt');
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const pt = urlParams.get('pt') || 'unknown';
 
 	var API    = new Manager();
-	//const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
-	init_data_pipe(API, 'N1NLIFf6LdYh',  {file_type:'csv'});	
+	const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
+	init_data_pipe(API, 'N1NLIFf6LdYh',  {
+		file_type:'csv',
+		file_name: 'iat_${pt}_${subid}.csv'
+	});
 
     API.setName('mgr');
     API.addSettings('skip',true);
