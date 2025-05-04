@@ -528,45 +528,40 @@ define(['questAPI'], function(Quest){
 	*/
     API.addSequence([
         {
-            mixer:'random',
-            data:[
-                {
-                    inherit:'basicPage',
-                    questions:[
-                        {inherit:'demographics', name:'birthMonth'},
-                        {inherit:'demographics', name:'birthYear'}
-                    ]
-                },
-                {
-                    inherit:'basicPage',
-                    questions:[
+        	inherit:'basicPage',
+                questions:[
+                	{inherit:'demographics', name:'birthMonth'},
+                	{inherit:'demographics', name:'birthYear'}
+                ]
+        },
+        {
+                inherit:'basicPage',
+                questions:[
                         {inherit:'demographics', name:'genderIdentity'},
                         {inherit:'demographics', name:'transgender'}
-                    ]
-                },
-                {
-                    inherit:'basicPage',
-                    questions:[
-                        {inherit:'demographics', name:'iatExperience'},
+                ]
+        },
+        {
+                inherit:'basicPage',
+                questions:[
+                	{inherit:'demographics', name:'iatExperience'},
                         {inherit:'demographics', name:'politicalIdentity'},
                         {inherit:'demographics', name:'religious_affiliation'}
-                    ]
-                },
-                {
-                    inherit:'basicPage',
-                    questions:[
+                ]
+        },
+        {
+                inherit:'basicPage',
+                questions:[
                         {inherit:'demographics', name:'citizenship'},
                         {inherit:'demographics', name:'currentCountry'}
-                    ]
-                },
-                {
-                    inherit:'basicPage',
-                    questions:[
+                ]
+        },
+        {
+                inherit:'basicPage',
+                questions:[
                         {inherit:'demographics', name:'education'},
                         {inherit:'demographics', name:'occupation'}
-                    ]
-                }
-            ]
+                ]
         }
     ]);
 
