@@ -549,7 +549,7 @@ define(['questAPI'], function(Quest){
                     questions:[
                         {inherit:'demographics', name:'iatExperience'},
                         {inherit:'demographics', name:'politicalIdentity'},
-                        {inherit:'demographics', name:'religion'}
+                        {inherit:'demographics', name:'religious_affiliation'}
                     ]
                 },
                 {
