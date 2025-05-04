@@ -11,7 +11,7 @@ define(['questAPI'], function(Quest){
         decline: true,
         declineText: isTouch ? 'Decline' : 'Decline to Answer', 
         autoFocus:true, 
-        progressBar: 'Page <%= pagesMeta.number %> out of 5'
+        progressBar: 'Page <%= pagesMeta.number %> out of 9'
     });
 
     /**
@@ -703,48 +703,63 @@ define(['questAPI'], function(Quest){
 	* Sequence: present demographic questions
 	*/
     API.addSequence([
-        {
-		mixer: 'random',
-		data: [
-			{
-	        	inherit:'basicPage',
-	                questions: [
-	                	{inherit:'birthMonth'},
-	                	{inherit:'birthYear'}
-				]
-			},
-	        	{
-	                inherit:'basicPage',
-	                questions: [
-	                        {inherit:'gender_Identity'},
-	                        {inherit:'transgender'}
-	                	]
-	        	},
-        		{
-	                inherit:'basicPage',
-	                questions: [
-	                	{inherit:'IAT_Experience'},
-	                        {inherit:'political_Identity'},
-	                        {inherit:'religious_affiliation'}
-	                	]
-        		},
-        		{
-	                inherit:'basicPage',
-	                questions:[
-	                        {inherit:'citizenship'},
-	                        {inherit:'current_Country'}
-	                	]
-        		},
-        		{
-	                inherit:'basicPage',
-	                questions:[
-	                        {inherit:'education'},
-	                        {inherit:'occupation'}
-	                	]
-        		}
-		]
-	}
-    ]);
+    {
+        inherit: 'basicPage',
+        questions: [
+            {inherit: 'birthMonth'}
+        ]
+    },
+    {
+        inherit: 'basicPage',
+        questions: [
+            {inherit: 'birthYear'}
+        ]
+    },
+    {
+        inherit: 'basicPage',
+        questions: [
+            {inherit:'gender_Identity'},
+	    {inherit: 'transgender'}
+        ]
+    },
+    {
+        inherit: 'basicPage',
+        questions: [
+            {inherit: 'IAT_Experience'}
+        ]
+    },
+    {
+        inherit: 'basicPage',
+        questions: [
+            {inherit: 'political_Identity'}
+        ]
+    },
+    {
+        inherit: 'basicPage',
+        questions: [
+            {inherit: 'religious_affiliation'}
+        ]
+    },
+    {
+        inherit: 'basicPage',
+        questions: [
+            {inherit: 'citizenship' },
+	    {inherit: 'current_Country'}
+        ]
+    },
+    {
+        inherit: 'basicPage',
+        questions: [
+            {inherit: 'education'}
+        ]
+    },
+    {
+        inherit: 'basicPage',
+        questions: [
+            {inherit: 'occupation'}
+        ]
+    }
+]);
 
     return API.script;
 });
