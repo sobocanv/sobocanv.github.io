@@ -148,7 +148,7 @@ define(['questAPI'], function(Quest){
             data : [
                 {
                     mixer : 'random', 
-                    wrapper:true, 
+                    wrapper: true, 
                     data : [
                         {
                             inherit:'basicPage', 
