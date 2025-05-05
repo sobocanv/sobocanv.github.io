@@ -177,7 +177,8 @@ define(['managerAPI',
                 {inherit: 'raceiat'}
             ]
         },
-	
+
+	{inherit: 'explicits'},
 	{inherit: 'uploading'},
         {inherit: 'lastpage'},
         {inherit: 'redirect'}
