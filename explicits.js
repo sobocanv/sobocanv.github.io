@@ -59,6 +59,18 @@ define(['questAPI'], function(Quest){
         ]
     });
 
+    API.addQuestionsSet('explicitMotivation',{
+        inherit : 'basicSelect',
+        answers: [
+            {text:'Močno se strinjam', value:7},
+            {text:'Zmerno se strinjam', value:6},
+            {text:'Rahlo se strinjam', value:5},
+            {text:'Nevtralen', value:4},
+            {text:'Rahlo se ne strinjam', value:3},
+            {text:'Zmerno se ne strinjam', value:2},
+            {text:'Močno se ne strinjam', value:1}
+        ]
+    });
 	
     /**
 	*Specific questions
@@ -90,6 +102,46 @@ define(['questAPI'], function(Quest){
         stem: 'Kako toplo ali hladno se počutite do <b><%= global.foreignLabels %></b>?'
     });
 
+    API.addQuestionsSet('motivationStandards',{
+        inherit: 'explicitMotivation',
+        name: 'motivation_standards',
+        stem: 'Because of today\'s standards I try to appear nonprejudiced toward Foreigners.'
+    });
+
+    API.addQuestionsSet('motivationAppearance',{
+        inherit: 'explicitMotivation',
+        name: 'motivation_appearance',
+        stem: 'I attempt to appear nonprejudiced toward Foreigners in order to avoid disapproval from others.'
+    });
+
+    API.addQuestionsSet('motivationInternal',{
+        inherit: 'explicitMotivation',
+        name: 'motivation_internal',
+        stem: 'I am personally motivated by my beliefs to be nonprejudiced toward Foreigners.'
+    });
+
+    API.addQuestionsSet('motivationValues',{
+        inherit: 'explicitMotivation',
+        name: 'motivation_values',
+        stem: 'Because of my personal values, I believe that using stereotypes about Foreigners is wrong.'
+    });
+
+    API.addQuestionsSet('religiousPreference',{
+        inherit : 'basicSelect',
+        name: 'religious_preference',
+        stem: 'What is your religious preference?',
+        answers: [
+            {text:'Protestant', value:1},
+            {text:'Roman Catholic', value:2},
+            {text:'Orthodox Catholic', value:3},
+            {text:'Jewish', value:4},
+            {text:'Muslim', value:5},
+            {text:'Hindu', value:6},
+            {text:'Buddhist', value:7},
+            {text:'Something else', value:8}
+        ]
+    });
+
     API.addSequence([
         {
             mixer : 'random', 
@@ -112,6 +164,26 @@ define(['questAPI'], function(Quest){
                     inherit:'basicPage', 
                     questions: {inherit:'attributes7'}
                 }
+		{   
+		    inherit:'basicPage',
+		    questions: {inherit:'motivationStandards'}
+		},
+                {
+		    inherit:'basicPage',
+		    questions: {inherit:'motivationAppearance'}
+		},
+                {
+		    inherit:'basicPage',
+		    questions: {inherit:'motivationInternal'}
+		},
+                {
+		    inherit:'basicPage',
+		    questions: {inherit:'motivationValues'}
+		},
+                {
+		    inherit:'basicPage',
+			questions: {inherit:'religiousPreference'}
+		}
             ]
         }
     ]);
