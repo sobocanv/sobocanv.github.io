@@ -11,7 +11,7 @@ define(['questAPI'], function(Quest){
         decline: true,
         declineText: isTouch ? 'Decline' : 'Decline to Answer', 
         autoFocus:true, 
-        progressBar: 'Page <%= pagesMeta.number %> out of 11'
+        progressBar: 'Page <%= pagesMeta.number %> out of 5'
     });
 
     /**
@@ -181,86 +181,6 @@ define(['questAPI'], function(Quest){
 	        { text: '1900', value: '1900' }
 	    ]
         });
-
-	API.addQuestionsSet('race_Ethnicity', {
-	    inherit: 'basicQ',
-	    type: 'selectMulti',
-	    name: 'race_Ethnicity',
-	    stem: 'What is your race or ethnicity? (you can select more than one)',
-	    decline: true, // allow decline to answer
-	    answers: [
-	        'American Indian or Alaska Native',
-	        'Asian',
-	        'Black or African American',
-	        'Hispanic, Latino, or Spanish',
-	        'Middle Eastern or Northern African',
-	        'Native Hawaiian or Other Pacific Islander',
-	        'White',
-	        'Another group'
-	    ],
-	    onAnswer: function(answers) {
-	        const followUps = [];
-	
-	        if (answers.includes('American Indian or Alaska Native')) {
-	            followUps.push({
-	                type: 'text',
-	                name: 'americanIndianDetail',
-	                stem: 'What American Indian or Alaska Native group(s) do you identify with? (Optional)'
-	            });
-	        }
-	        if (answers.includes('Asian')) {
-	            followUps.push({
-	                type: 'text',
-	                name: 'asianDetail',
-	                stem: 'What Asian group(s) do you identify with? (Optional)'
-	            });
-	        }
-	        if (answers.includes('Black or African American')) {
-	            followUps.push({
-	                type: 'text',
-	                name: 'blackDetail',
-	                stem: 'What Black or African American group(s) do you identify with? (Optional)'
-	            });
-	        }
-	        if (answers.includes('Hispanic, Latino, or Spanish')) {
-	            followUps.push({
-	                type: 'text',
-	                name: 'hispanicDetail',
-	                stem: 'What Hispanic, Latino, or Spanish group(s) do you identify with? (Optional)'
-	            });
-	        }
-	        if (answers.includes('Middle Eastern or Northern African')) {
-	            followUps.push({
-	                type: 'text',
-	                name: 'middleEasternDetail',
-	                stem: 'What Middle Eastern or Northern African group(s) do you identify with? (Optional)'
-	            });
-	        }
-	        if (answers.includes('Native Hawaiian or Other Pacific Islander')) {
-	            followUps.push({
-	                type: 'text',
-	                name: 'pacificIslanderDetail',
-	                stem: 'What Native Hawaiian or other Pacific Islander group(s) do you identify with? (Optional)'
-	            });
-	        }
-	        if (answers.includes('White')) {
-	            followUps.push({
-	                type: 'text',
-	                name: 'whiteDetail',
-	                stem: 'What White group(s) do you identify with? (Optional)'
-	            });
-	        }
-	        if (answers.includes('Another group')) {
-	            followUps.push({
-	                type: 'text',
-	                name: 'otherDetail',
-	                stem: 'What racial or ethnic group(s) do you identify with?'
-	            });
-	        }
-		// Add follow-up questions dynamically
-        	this.addQuestions(followUps);
-	    }
-	});
 	
         API.addQuestionsSet('gender_Identity', {
 		inherit:'basicSelect',
@@ -278,53 +198,6 @@ define(['questAPI'], function(Quest){
 		answers:[
 			'Yes','No','I don\'t know'
         	]
-	});
-	
-        API.addQuestionsSet('IAT_Experience', {
-		inherit:'basicSelect',
-		name:'IAT_Experience',
-		stem:'How many implicit association tests have you previously performed?',
-		answers:[
-			'0','1','2','3-5','6+'
-        	]
-	});
-	
-        API.addQuestionsSet('political_Identity', {
-		inherit:'basicSelect',
-		name:'politicalIdentity',
-		stem:'What is your political identity?',
-		answers: [
-	            {text: 'Strongly conservative', value: 1},
-	            {text: 'Moderately Conservative', value: 2},
-		    {text: 'Slightly Conservative', value: 3},
-	            {text: 'Neutral', value: 4},
-	            {text: 'Slightly Liberal', value: 5},
-		    {text: 'Moderately Liberal', value: 6},
-		    {text: 'Strongly Liberal', value: 7}
-        	]
-	});
-	
-        API.addQuestionsSet('religious_affiliation', {
-		inherit:'basicSelect',
-		name:'religious_affiliation',
-		stem:'What is your religious affiliation?',
-		answers: [
-			'Buddhist/Confucian/Shinto','Christian: Catholic or Orthodox',
-			'Christian: Protestant or Other','Hindu', 'Jewish',
-			'Muslim/Islamic', 'Not Religious','Other Religion'
-	        ]
-	});
-
-	API.addQuestionsSet('religiosity_Level', {
-	    inherit: 'basicSelect',
-	    name: 'religiosity_Level',
-	    stem: 'How religious do you consider yourself to be?',
-	    answers: [
-	        {text: 'Strongly religious', value: 1},
-	        {text: 'Moderately religious', value: 2},
-	        {text: 'Slightly religious', value: 3},
-	        {text: 'Not at all religious', value: 4}
-	    ]
 	});
         
 	API.addQuestionsSet('citizenship', {
@@ -742,20 +615,6 @@ define(['questAPI'], function(Quest){
 			'M.B.A.','J.D.','M.D.','Ph.D.','Other Advanced Degree'
         	]
 	});
-	
-        API.addQuestionsSet('occupation', {
-		inherit:'basicSelect',
-		name:'occupation',
-		stem:'Please indicate your full-time or part-time occupation. If you are now retired please answer by indicating your last full-time job. If you were previously employed and are not presently employed, please indicate your last part-time or full-time job.',
-		answers:[
-			'Administrative Support','Arts/Design/Entertainment/Sport','Business',
-			'Computer/Math','Construction/Extraction','Education','Engineering/Architecture',
-			'Farming/Fishing/Forestry','Food Service','Healthcare','Homemaking or Parenting',
-			'Legal','Maintenance','Management','Military','Production','Protective Service',
-			'Repair/Installation','Sales','Science','Service and Personal Care',
-			'Social Services','Transportation','Unemployed'
-        	]
-	});
 
     /**
 	* Sequence: present demographic questions
@@ -776,42 +635,11 @@ define(['questAPI'], function(Quest){
         ]
     },
     {
-	    inherit: 'basicPage',
-	    questions: [
-		{inherit: 'race_Ethnicity'}
-	    ]
-    },
-    {
         inherit: 'basicPage',
         questions: [
             {inherit:'gender_Identity'},
 	    {inherit: 'transgender'}
         ]
-    },
-    {
-        inherit: 'basicPage',
-        questions: [
-            {inherit: 'IAT_Experience'}
-        ]
-    },
-    {
-        inherit: 'basicPage',
-        questions: [
-            {inherit: 'political_Identity'}
-        ]
-    },
-    {
-        inherit: 'basicPage',
-        questions: [
-            {inherit: 'religious_affiliation'}
-        ]
-    },
-    {
-	inherit: 'basicPage',
-	questions: [
-		{inherit: 'religiosity_Level'}
-	]
-		    
     },
     {
         inherit: 'basicPage',
@@ -824,12 +652,6 @@ define(['questAPI'], function(Quest){
         inherit: 'basicPage',
         questions: [
             {inherit: 'education'}
-        ]
-    },
-    {
-        inherit: 'basicPage',
-        questions: [
-            {inherit: 'occupation'}
         ]
     }
 ]);
