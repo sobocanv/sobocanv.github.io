@@ -8,3 +8,6 @@ The online study aims to investigate implicit biases regarding gender and race, 
 
 ## Data
 The data collected from participants is securely stored and analyzed through OSF and DataPipe integration, promoting transparency, accountability, and adherence to data privacy standards. The study is available online via GitHub Pages, enabling easy participation from a broad pool of participants, contributing to the richness of the study’s findings.
+
+## Acknowledgments
+This project was developed in 2025 as part of the **Localization and Translation Projects** course at the **University of Ljubljana, Faculty of Arts**.
