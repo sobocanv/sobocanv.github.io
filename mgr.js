@@ -17,25 +17,17 @@ define(['managerAPI',
     API.setName('mgr');
     API.addSettings('skip',true);
 
-    //Randomly select which of two sets of category labels to use.
-    let groupSet = API.shuffle(['a','b'])[0];
-    let localLabels = [];
-    let foreignLabels = [];
-
-    if (groupSet == 'a') {
-        localLabels.push('Slovenci');
-        foreignLabels.push('Tujci');
-    } else {
-        localLabels.push('Slovenski ljudje');
-        foreignLabels.push('Ljudje iz tujine');
-    }
+    //Assign labels to both groups
+    //let groupSet = API.shuffle(['a','b'])[0];
+    let localLabels = ['Slovenci'];
+    let foreignLabels = ['Neslovenci'];
 
     API.addGlobal({
         raceiat:{},
         //YBYB: change when copying back to the correct folder
         //baseURL: './images/',
         //raceSet:raceSet,
-	groupSet:groupSet,
+	//groupSet:groupSet,
         localLabels:localLabels,
         foreignLabels:foreignLabels,
 	//Select randomly what name to see.
@@ -70,6 +62,7 @@ define(['managerAPI',
             'Hatred', 'Hurtful', 'Sickening', 'Yucky'
         ])
     });
+
 
     API.addTasksSet({
         instructions: [{
@@ -175,25 +168,20 @@ define(['managerAPI',
         
         {inherit: 'intro'},
 	{inherit: 'demographics'},
+        
+	// force the instructions to preceed the iat
         {
-            mixer:'random',
-            data:[
-                {inherit: 'explicits'},
-
-                // force the instructions to preceed the iat
-                {
-                    mixer: 'wrapper',
-                    data: [
-                        {inherit: 'raceiat_instructions'},
-                        {inherit: 'raceiat'}
-                    ]
-                }
+            mixer: 'wrapper',
+            data: [
+                {inherit: 'raceiat_instructions'},
+                {inherit: 'raceiat'}
             ]
         },
-
-		{inherit: 'uploading'},
+	
+	{inherit: 'uploading'},
         {inherit: 'lastpage'},
         {inherit: 'redirect'}
+
     ]);
 
     return API.script;
