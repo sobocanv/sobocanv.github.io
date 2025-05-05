@@ -299,7 +299,7 @@ define(['questAPI'], function(Quest){
 		    {text: 'Slightly Conservative', value: 3},
 	            {text: 'Neutral', value: 4},
 	            {text: 'Slightly Liberal', value: 5},
-		    {text: 'Moderately Liberal', value: 6}
+		    {text: 'Moderately Liberal', value: 6},
 	            {text: 'Strongly Liberal', value: 7}
         	]
 	});
