@@ -11,7 +11,7 @@ define(['questAPI'], function(Quest){
         decline: true,
         declineText: isTouch ? 'Decline' : 'Decline to Answer', 
         autoFocus:true, 
-        progressBar: 'Page <%= pagesMeta.number %> out of 9'
+        progressBar: 'Page <%= pagesMeta.number %> out of 11'
     });
 
     /**
@@ -37,9 +37,9 @@ define(['questAPI'], function(Quest){
     /**
 	* Specific demographic questions
 	*/
-    API.addQuestionsSet('birthMonth', {
+    API.addQuestionsSet('birth_Month', {
 	    inherit:'basicSelect',
-	    name:'birthMonth',
+	    name:'birth_Month',
 	    stem:'What is your birth month?',
 	    answers:[
             'January','February','March','April',
@@ -48,11 +48,29 @@ define(['questAPI'], function(Quest){
         ]
     });
 	
-    API.addQuestionsSet('birthYear', {
+    API.addQuestionsSet('birth_Year', {
 	    inherit:'basicDropdown',
-	    name:'birthYear',
+	    name:'birth_Year',
 	    stem:'What is your birth year?',
 	    answers: [
+		{ text: '2025', value: '2025' },
+	        { text: '2024', value: '2024' },
+		{ text: '2023', value: '2023' },
+	        { text: '2022', value: '2022' },
+		{ text: '2021', value: '2021' },
+	        { text: '2020', value: '2020' },
+	        { text: '2019', value: '2019' },
+	        { text: '2018', value: '2018' },
+	        { text: '2017', value: '2017' },
+	        { text: '2016', value: '2016' },
+		{ text: '2015', value: '2015' },
+	        { text: '2014', value: '2014' },
+	        { text: '2013', value: '2013' },
+	        { text: '2012', value: '2012' },
+	        { text: '2011', value: '2011' },
+	        { text: '2010', value: '2010' },
+	        { text: '2009', value: '2009' },
+	        { text: '2008', value: '2008' },
 	        { text: '2007', value: '2007' },
 	        { text: '2006', value: '2006' },
 	        { text: '2005', value: '2005' },
@@ -163,13 +181,93 @@ define(['questAPI'], function(Quest){
 	        { text: '1900', value: '1900' }
 	    ]
         });
+
+	API.addQuestionsSet('race_Ethnicity', {
+	    inherit: 'basicQ',
+	    type: 'selectMulti',
+	    name: 'race_Ethnicity',
+	    stem: 'What is your race or ethnicity? (you can select more than one)',
+	    decline: true, // allow decline to answer
+	    answers: [
+	        'American Indian or Alaska Native',
+	        'Asian',
+	        'Black or African American',
+	        'Hispanic, Latino, or Spanish',
+	        'Middle Eastern or Northern African',
+	        'Native Hawaiian or Other Pacific Islander',
+	        'White',
+	        'Another group'
+	    ],
+	    onAnswer: function(answers) {
+	        const followUps = [];
+	
+	        if (answers.includes('American Indian or Alaska Native')) {
+	            followUps.push({
+	                type: 'text',
+	                name: 'americanIndianDetail',
+	                stem: 'What American Indian or Alaska Native group(s) do you identify with? (Optional)'
+	            });
+	        }
+	        if (answers.includes('Asian')) {
+	            followUps.push({
+	                type: 'text',
+	                name: 'asianDetail',
+	                stem: 'What Asian group(s) do you identify with? (Optional)'
+	            });
+	        }
+	        if (answers.includes('Black or African American')) {
+	            followUps.push({
+	                type: 'text',
+	                name: 'blackDetail',
+	                stem: 'What Black or African American group(s) do you identify with? (Optional)'
+	            });
+	        }
+	        if (answers.includes('Hispanic, Latino, or Spanish')) {
+	            followUps.push({
+	                type: 'text',
+	                name: 'hispanicDetail',
+	                stem: 'What Hispanic, Latino, or Spanish group(s) do you identify with? (Optional)'
+	            });
+	        }
+	        if (answers.includes('Middle Eastern or Northern African')) {
+	            followUps.push({
+	                type: 'text',
+	                name: 'middleEasternDetail',
+	                stem: 'What Middle Eastern or Northern African group(s) do you identify with? (Optional)'
+	            });
+	        }
+	        if (answers.includes('Native Hawaiian or Other Pacific Islander')) {
+	            followUps.push({
+	                type: 'text',
+	                name: 'pacificIslanderDetail',
+	                stem: 'What Native Hawaiian or other Pacific Islander group(s) do you identify with? (Optional)'
+	            });
+	        }
+	        if (answers.includes('White')) {
+	            followUps.push({
+	                type: 'text',
+	                name: 'whiteDetail',
+	                stem: 'What White group(s) do you identify with? (Optional)'
+	            });
+	        }
+	        if (answers.includes('Another group')) {
+	            followUps.push({
+	                type: 'text',
+	                name: 'otherDetail',
+	                stem: 'What racial or ethnic group(s) do you identify with?'
+	            });
+	        }
+		// Add follow-up questions dynamically
+        	this.addQuestions(followUps);
+	    }
+	});
 	
         API.addQuestionsSet('gender_Identity', {
 		inherit:'basicSelect',
 		name:'gender_Identity',
 		stem:'What is your gender identity?',
 		answers:[
-			'Woman','Man','Nonbinary','Other'
+			'Woman','Man','Genderqueer, nonbinary, or agender'
         	]
 	});
 	
@@ -178,7 +276,7 @@ define(['questAPI'], function(Quest){
 		name:'transgender',
 		stem:'Do you identify as transgender?',
 		answers:[
-			'Yes','No','Do not want to disclose'
+			'Yes','No','I don\'t know'
         	]
 	});
 	
@@ -187,7 +285,7 @@ define(['questAPI'], function(Quest){
 		name:'IAT_Experience',
 		stem:'How many implicit association tests have you previously performed?',
 		answers:[
-			'0','1–2','3–5','More than 5'
+			'0','1','2','3-5','6+'
         	]
 	});
 	
@@ -196,38 +294,37 @@ define(['questAPI'], function(Quest){
 		name:'politicalIdentity',
 		stem:'What is your political identity?',
 		answers: [
-	            {text: 'Strongly right-wing / conservative', value: 1},
-	            {text: 'Moderately right-wing / conservative', value: 2},
-	            {text: 'Centrist / neutral', value: 3},
-	            {text: 'Moderately left-wing / progressive', value: 4},
-	            {text: 'Strongly left-wing / progressive', value: 5}
+	            {text: 'Strongly conservative', value: 1},
+	            {text: 'Moderately Conservative', value: 2},
+		    {text: 'Slightly Conservative', value: 3},
+	            {text: 'Neutral', value: 4},
+	            {text: 'Slightly Liberal', value: 5},
+		    {text: 'Moderately Liberal', value: 6}
+	            {text: 'Strongly Liberal', value: 7}
         	]
 	});
 	
         API.addQuestionsSet('religious_affiliation', {
-		inherit:'basicDropdown',
+		inherit:'basicSelect',
 		name:'religious_affiliation',
 		stem:'What is your religious affiliation?',
 		answers: [
-	            {text: 'Atheist', value: 'atheist'},
-	            {text: 'Buddhist', value: 'buddhist'},
-	            {text: 'Catholic', value: 'catholic'},
-	            {text: 'Protestant', value: 'protestant'},
-	            {text: 'Orthodox Christian', value: 'orthodox_christian'},
-	            {text: 'Hindu', value: 'hindu'},
-	            {text: 'Muslim', value: 'muslim'},
-	            {text: 'Jewish', value: 'jewish'},
-	            {text: 'Other', value: 'other'}
-	        ],
-	        onAnswer: function(answer) {
-	            if (answer === 'other') {
-	                this.addQuestion({
-	                    type: 'text',
-	                    name: 'other_religion',
-	                    stem: 'Please specify your religion:'
-	                });
-	            }
-        	}
+			'Buddhist/Confucian/Shinto','Christian: Catholic or Orthodox',
+			'Christian: Protestant or Other','Hindu', 'Jewish',
+			'Muslim/Islamic', 'Not Religious','Other Religion'
+	        ]
+	});
+
+	API.addQuestionsSet('religiosity_Level', {
+	    inherit: 'basicSelect',
+	    name: 'religiosity_Level',
+	    stem: 'How religious do you consider yourself to be?',
+	    answers: [
+	        {text: 'Strongly religious', value: 1},
+	        {text: 'Moderately religious', value: 2},
+	        {text: 'Slightly religious', value: 3},
+	        {text: 'Not at all religious', value: 4}
+	    ]
 	});
         
 	API.addQuestionsSet('citizenship', {
@@ -639,64 +736,25 @@ define(['questAPI'], function(Quest){
 		name:'education',
 		stem:'What is your highest level of education?',
 		answers:[
-            		'No formal education','Some primary school',
-			'Completed primary school','Some secondary school',
-			'Completed secondary school','Vocational or technical training',
-			'Some college or university','Completed bachelor’s degree',
-			'Some graduate or postgraduate study','Completed master’s degree',
-			'Completed doctoral degree (Ph.D., M.D., etc.)'
+			'Elementary School','Junior High or Middle School','Some High School',
+			'High School Graduate','Some College','Associate\'s Degree',
+			'Bachelor\'s Degree','Some Graduate School','Master\'s Degree',
+			'M.B.A.','J.D.','M.D.','Ph.D.','Other Advanced Degree'
         	]
 	});
 	
         API.addQuestionsSet('occupation', {
 		inherit:'basicSelect',
 		name:'occupation',
-		stem:'What is your occupation (or last job if retired/unemployed)?',
+		stem:'Please indicate your full-time or part-time occupation. If you are now retired please answer by indicating your last full-time job. If you were previously employed and are not presently employed, please indicate your last part-time or full-time job.',
 		answers:[
-            		'Education / Research','Healthcare / Medicine','Technology / IT',
-			'Business / Finance', 'Arts / Entertainment','Legal / Public Administration',
-			'Science / Engineering','Manual Labor / Skilled Trades','Service Industry'
-        	], 
-	        onAnswer: function(answer) {
-	            let subcategories = [];
-	            switch(answer) {
-	                case 'Education / Research':
-	                    subcategories = ['Teacher', 'Professor', 'Researcher', 'Administrator'];
-	                    break;
-	                case 'Healthcare / Medicine':
-	                    subcategories = ['Doctor', 'Nurse', 'Therapist', 'Medical Technician', 'Healthcare Administrator'];
-	                    break;
-	                case 'Technology / IT':
-	                    subcategories = ['Software Developer', 'IT Support', 'Data Analyst', 'System Administrator', 'Cybersecurity Specialist'];
-	                    break;
-	                case 'Business / Finance':
-	                    subcategories = ['Manager', 'Accountant', 'Financial Analyst', 'Marketing Specialist', 'Sales'];
-	                    break;
-	                case 'Arts / Entertainment':
-	                    subcategories = ['Musician', 'Actor', 'Designer', 'Writer', 'Performer'];
-	                    break;
-	                case 'Legal / Public Administration':
-	                    subcategories = ['Lawyer', 'Paralegal', 'Government Official', 'Civil Servant', 'Police / Security'];
-	                    break;
-	                case 'Science / Engineering':
-	                    subcategories = ['Engineer', 'Scientist', 'Lab Technician', 'Architect'];
-	                    break;
-	                case 'Manual Labor / Skilled Trades':
-	                    subcategories = ['Construction Worker', 'Electrician', 'Mechanic', 'Plumber', 'Carpenter'];
-	                    break;
-	                case 'Service Industry':
-	                    subcategories = ['Hospitality', 'Retail', 'Food Service', 'Customer Support', 'Transportation'];
-	                    break;
-	            }
-	            if(subcategories.length > 0) {
-	                this.addQuestion({
-	                    inherit: 'basicSelect',
-	                    name: 'occupationSubcategory',
-	                    stem: 'Please select the subcategory that best fits your occupation:',
-	                    answers: subcategories
-	                }
-		    )}
-        	}
+			'Administrative Support','Arts/Design/Entertainment/Sport','Business',
+			'Computer/Math','Construction/Extraction','Education','Engineering/Architecture',
+			'Farming/Fishing/Forestry','Food Service','Healthcare','Homemaking or Parenting',
+			'Legal','Maintenance','Management','Military','Production','Protective Service',
+			'Repair/Installation','Sales','Science','Service and Personal Care',
+			'Social Services','Transportation','Unemployed'
+        	]
 	});
 
     /**
@@ -705,15 +763,23 @@ define(['questAPI'], function(Quest){
     API.addSequence([
     {
         inherit: 'basicPage',
+	decline: false,
         questions: [
-            {inherit: 'birthMonth'}
+            {inherit: 'birth_Month'}
         ]
     },
     {
         inherit: 'basicPage',
+	decline: false,
         questions: [
-            {inherit: 'birthYear'}
+            {inherit: 'birth_Year'}
         ]
+    },
+    {
+	    inherit: 'basicPage',
+	    questions: [
+		{inherit: 'race_Ethnicity'}
+	    ]
     },
     {
         inherit: 'basicPage',
@@ -741,9 +807,16 @@ define(['questAPI'], function(Quest){
         ]
     },
     {
+	inherit: 'basicPage',
+	questions: [
+		{inherit: 'religiosity_Level'}
+	]
+		    
+    },
+    {
         inherit: 'basicPage',
         questions: [
-            {inherit: 'citizenship' },
+            {inherit: 'citizenship'},
 	    {inherit: 'current_Country'}
         ]
     },
