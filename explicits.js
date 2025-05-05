@@ -163,7 +163,7 @@ define(['questAPI'], function(Quest){
                 {
                     inherit:'basicPage', 
                     questions: {inherit:'attributes7'}
-                }
+                },
 		{   
 		    mixer: 'random',
 		    wrapper: true,
@@ -185,7 +185,7 @@ define(['questAPI'], function(Quest){
 		    		questions: {inherit:'motivationValues'}
 				}
 		    ]
-		}
+		},
                 {
 		    inherit:'basicPage',
 			questions: {inherit:'religiousPreference'}
