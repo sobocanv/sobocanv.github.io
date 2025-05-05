@@ -165,21 +165,27 @@ define(['questAPI'], function(Quest){
                     questions: {inherit:'attributes7'}
                 }
 		{   
-		    inherit:'basicPage',
-		    questions: {inherit:'motivationStandards'}
-		},
-                {
-		    inherit:'basicPage',
-		    questions: {inherit:'motivationAppearance'}
-		},
-                {
-		    inherit:'basicPage',
-		    questions: {inherit:'motivationInternal'}
-		},
-                {
-		    inherit:'basicPage',
-		    questions: {inherit:'motivationValues'}
-		},
+		    mixer: 'random',
+		    wrapper: true,
+		    data: [
+		    	{
+		    		inherit:'basicPage',
+		    		questions: {inherit:'motivationStandards'}
+			},
+                	{
+		    		inherit:'basicPage',
+		    		questions: {inherit:'motivationAppearance'}
+			},
+                	{
+		    		inherit:'basicPage',
+		    		questions: {inherit:'motivationInternal'}
+			},
+                	{
+		    		inherit:'basicPage',
+		    		questions: {inherit:'motivationValues'}
+				}
+		    ]
+		}
                 {
 		    inherit:'basicPage',
 			questions: {inherit:'religiousPreference'}
