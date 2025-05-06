@@ -41,8 +41,6 @@ define(['questAPI'], function(Quest){
 	    inherit:'basicSelect',
 	    name:'birth_Month',
 	    stem:'V katerem mesecu ste rojeni?',
-	    style: 'horizontal',
-	    minWidth: '10%',
 	    answers: [
             'Januar','Februar','Marec','April',
 	    'Maj','Junij','Julij','Avgust','September',
