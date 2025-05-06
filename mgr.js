@@ -32,34 +32,27 @@ define(['managerAPI',
         foreignLabels:foreignLabels,
 	//Select randomly what name to see.
 	slovenianNames: API.shuffle([
-	    'Ana', 'Matej', 'Tina', 'Luka',
-	    'Nina', 'Marko', 'Petra', 'Gregor'
+	    'Aljaž', 'Anja', 'Andrej', 'Anže',
+	    'Brigita', 'Ema', 'Filip', 'Hana',
+	    'Jakob', 'Jan', 'Jurij', 'Katja',
+	    'Klara', 'Klavdija', 'Maja', 'Mihael',
+	    'Neža', 'Roman', 'Rok', 'Sara'
 	]),
     	foreignNames: API.shuffle([
-	    'Amir', 'Fatima', 'Jusuf', 'Emina',
-	    'Dino', 'Selma', 'Mirza', 'Armin'
+	    'Aisha', 'Ajdin', 'Amir', 'Emina',
+	    'Esma', 'Gavin', 'Hrvoje', 'Ingrid',
+	    'Jacqueline', 'Jelena', 'Kenji', 'Mirsad',
+	    'Mohamed', 'Nenad', 'Pierre', 'Sanela',
+	    'Snježana', 'Stjepan', 'Suki', 'Zorana'
 	]),
-        //Select randomly what attribute words to see. 
-        //Based on Axt, Feng, & Bar-Anan (2021).
+        //Select randomly what attribute words to see.
         posWords : API.shuffle([
-            'Love', 'Cheer', 'Friend', 'Pleasure',
-            'Adore', 'Cheerful', 'Friendship', 'Joyful', 
-            'Smiling','Cherish', 'Excellent', 'Glad', 
-            'Joyous', 'Spectacular', 'Appealing', 'Delight', 
-            'Excitement', 'Laughing', 'Attractive','Delightful', 
-            'Fabulous', 'Glorious', 'Pleasing', 'Beautiful', 
-            'Fantastic', 'Happy', 'Lovely', 'Terrific', 
-            'Celebrate', 'Enjoy', 'Magnificent', 'Triumph'
+            'smeh', 'veselje', 'sreča', 'ljubezen',
+	    'lepota', 'užitek', 'mir', 'očaranost'
         ]), 
         negWords : API.shuffle([
-            'Abuse', 'Grief', 'Poison', 'Sadness', 
-            'Pain', 'Despise', 'Failure', 'Nasty', 
-            'Angry', 'Detest', 'Horrible', 'Negative', 
-            'Ugly', 'Dirty', 'Gross', 'Evil', 
-            'Rotten','Annoy', 'Disaster', 'Horrific',  
-            'Scorn', 'Awful', 'Disgust', 'Hate', 
-            'Humiliate', 'Selfish', 'Tragic', 'Bothersome', 
-            'Hatred', 'Hurtful', 'Sickening', 'Yucky'
+            'poraz', 'trpljenje', 'groza', 'gnus',
+	    'obup', 'strah', 'zloba'
         ])
     });
 
