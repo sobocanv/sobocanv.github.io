@@ -40,20 +40,20 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('birth_Month', {
 	    inherit:'basicSelect',
 	    name:'birth_Month',
-	    stem:'What is your birth month?',
+	    stem:'V katerem mesecu ste rojeni?',
 	    style: 'horizontal',
 	    minWidth: '10%',
 	    answers: [
-            'January','February','March','April',
-	    'May','June','July','August','September',
-	    'October','November','December'
+            'Januar','Februar','Marec','April',
+	    'Maj','Junij','Julij','Avgust','September',
+	    'Oktober','November','December'
         ]
     });
 	
     API.addQuestionsSet('birth_Year', {
 	    inherit:'basicDropdown',
 	    name:'birth_Year',
-	    stem:'What is your birth year?',
+	    stem:'Katerega leta ste rojeni?',
 	    answers: [
 		{text: '2025', value: '2025'},
 	        {text: '2024', value: '2024'},
