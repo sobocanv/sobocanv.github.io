@@ -42,6 +42,7 @@ define(['questAPI'], function(Quest){
 	    name:'birth_Month',
 	    stem:'What is your birth month?',
 	    style: 'horizontal',
+	    minWidth: '8%',
 	    answers:[
             'January','February','March','April',
 	    'May','June','July','August','September',
