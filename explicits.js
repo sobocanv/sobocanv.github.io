@@ -80,13 +80,13 @@ define(['questAPI'], function(Quest){
         name: 'attributes7',
         stem: 'Katera izjava vas najbolje opisuje?',
         answers: [
-            {text:'Močno raje imam <%= global.foreignLabels %> kot <%= global.localLabels %>.',value:7},
-            {text:'Zmerno raje imam <%= global.foreignLabels %> kot <%= global.localLabels %>.',value:6},
-            {text:'Nekoliko raje imam <%= global.foreignLabels %> kot <%= global.localLabels %>.',value:5},
-            {text:'Enako rad imam <%= global.foreignLabels %> in <%= global.localLabels %>.',value:4},
-            {text:'Nekoliko raje imam <%= global.localLabels %> kot <%= global.foreignLabels %>.',value:3},
-            {text:'Zmerno raje imam <%= global.localLabels %> kot <%= global.foreignLabels %>.',value:2},
-            {text:'Močno raje imam <%= global.localLabels %> kot <%= global.foreignLabels %>.',value:1}
+            {text:'Močno raje imam Slovence kot Neslovence.',value:7},
+            {text:'Zmerno raje imam Slovence kot Neslovence.',value:6},
+            {text:'Nekoliko raje imam Slovence kot Neslovence.',value:5},
+            {text:'Enako rad imam Slovence in Neslovence.',value:4},
+            {text:'Nekoliko raje imam Neslovence kot Slovence.',value:3},
+            {text:'Zmerno raje imam Neslovence kot Slovence.',value:2},
+            {text:'Močno raje imam Neslovence kot Slovence.',value:1}
         ]
     });
 	
