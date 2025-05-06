@@ -44,9 +44,9 @@ define(['pipAPI','iat10_sl.js'], function(APIConstructor, iatExtension){
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },
         attribute1 : {
-            name : 'Bad words',
+            name : 'Slabe besede',
             title : {
-                media : {word : 'Bad words'},
+                media : {word : 'Slabe besede'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
@@ -58,15 +58,14 @@ define(['pipAPI','iat10_sl.js'], function(APIConstructor, iatExtension){
                 {word: global.negWords[4]},
                 {word: global.negWords[5]},
                 {word: global.negWords[6]},
-                {word: global.negWords[7]}
             ],
             //Stimulus css
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
         },
         attribute2 : {
-            name : 'Good words',
+            name : 'Dobre besede',
             title : {
-                media : {word : 'Good words'},
+                media : {word : 'Dobre besede'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
@@ -78,7 +77,7 @@ define(['pipAPI','iat10_sl.js'], function(APIConstructor, iatExtension){
                 {word: global.posWords[4]},
                 {word: global.posWords[5]},
                 {word: global.posWords[6]},
-                {word: global.posWords[7]}
+                {word: global.posWords[7]},
             ],
             //Stimulus css
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
