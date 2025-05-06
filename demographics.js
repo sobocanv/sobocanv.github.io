@@ -43,7 +43,7 @@ define(['questAPI'], function(Quest){
 	    stem:'What is your birth month?',
 	    style: 'horizontal',
 	    minWidth: '8%',
-	    answers:[
+	    answers: [
             'January','February','March','April',
 	    'May','June','July','August','September',
 	    'October','November','December'
@@ -188,7 +188,7 @@ define(['questAPI'], function(Quest){
 		inherit:'basicSelect',
 		name:'gender_Identity',
 		stem:'What is your gender identity?',
-		answers:[
+		answers: [
 			'Woman','Man','Genderqueer, nonbinary, or agender','Not Listed Above'
         	]
 	});
@@ -197,7 +197,7 @@ define(['questAPI'], function(Quest){
 		inherit:'basicSelect',
 		name:'transgender',
 		stem:'Do you identify as transgender?',
-		answers:[
+		answers: [
 			'Yes','No','I don\'t know'
         	]
 	});
@@ -610,7 +610,7 @@ define(['questAPI'], function(Quest){
 		inherit:'basicDropdown',
 		name:'education',
 		stem:'What is your highest level of education?',
-		answers:[
+		answers: [
 			{text: 'Elementary School', value: 'Elementary School'},
 			{text: 'Junior High or Middle School', value: 'Junior High or Middle School'},
 			{text: 'Some High School', value: 'Some High School'},
