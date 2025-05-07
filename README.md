@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a MinnoJS-based online study designed to explore implicit biases, with a focus on perceptions of Slovenian and non-Slovenian individuals. It was developed as part of the “Localization and Translation Projects” course at the University of Ljubljana, Faculty of Arts. The study utilizes OSF (Open Science Framework) and DataPipe for secure data storage and management, ensuring reliable handling of participant information. The study is hosted and deployed via GitHub Pages, providing broad accessibility and scalability.
+This project is a MinnoJS-based online study designed to explore implicit biases, with a focus on perceptions of Slovenian and non-Slovenian individuals. It was developed as part of the **Gravitacija: Large Language Models for Digital Humanities** project. The study utilizes OSF (Open Science Framework) and DataPipe for secure data storage and management, ensuring reliable handling of participant information. The study is hosted and deployed via GitHub Pages, providing broad accessibility and scalability.
 
 ## Description
 
