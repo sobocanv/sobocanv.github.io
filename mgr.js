@@ -119,7 +119,10 @@ define(['managerAPI',
     });
 
     API.addSequence([
-        { type: 'isTouch' }, //Use Minno's internal touch detection mechanism. 
+        { type: 'isTouch',
+	  text: 'Zaznali smo, da uporabljate zaslonski vmesnik. Želite nadaljevati?',
+    	  yesText: 'Da, rad/a bi uporabljal/a zaslonski vmesnik.',
+    	  noText: 'Ne, raje bom uporabljal/a tipkovnico.' }, //Use Minno's internal touch detection mechanism. 
         
         { type: 'post', path: ['$isTouch', 'groupSet', 'localLabels', 'foreignLabels'] },
 
