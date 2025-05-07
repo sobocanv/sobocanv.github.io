@@ -42,7 +42,7 @@ define(['questAPI'], function(Quest){
 	    name:'birth_Month',
 	    stem:'V katerem mesecu ste rojeni?',
 	    style:'multiButtons',
-	    minWidth:'8%',
+	    minWidth:'7.8%',
 	    answers: [
             	'Januar', 'Februar', 'Marec', 'April',
 		'Maj', 'Junij', 'Julij', 'Avgust',
