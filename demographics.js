@@ -38,22 +38,15 @@ define(['questAPI'], function(Quest){
 	* Specific demographic questions
 	*/
     API.addQuestionsSet('birth_Month', {
-	    inherit:'basicDropdown',
+	    inherit:'basicSelect',
 	    name:'birth_Month',
 	    stem:'V katerem mesecu ste rojeni?',
+	    style:'multiButtons',
+	    minWidth:'10%',
 	    answers: [
-            	{text: 'Januar', value: 'Januar'},
-	        {text: 'Februar', value: 'Februar'},
-	        {text: 'Marec', value: 'Marec'},
-	        {text: 'April', value: 'April'},
-	        {text: 'Maj', value: 'Maj'},
-	        {text: 'Junij', value: 'Junij'},
-	        {text: 'Julij', value: 'Julij'},
-	        {text: 'Avgust', value: 'Avgust'},
-	        {text: 'September', value: 'September'},
-	        {text: 'Oktober', value: 'Oktober'},
-	        {text: 'November', value: 'November'},
-	        {text: 'December', value: 'December'}
+            	'Januar', 'Februar', 'Marec', 'April',
+		'Maj', 'Junij', 'Julij', 'Avgust',
+		'September', 'Oktober', 'November', 'December'
             ]
     });
 	
