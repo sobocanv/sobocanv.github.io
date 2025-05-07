@@ -93,13 +93,13 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('thermLocal',{
         inherit : 'therm',
         name: 'Tlocal_0to10',
-        stem: 'Kako toplo ali hladno se počutite do <b><%= global.localLabels %></b>?'
+        stem: 'Kako toplo ali hladno se počutite do Slovencev?'
     });
 
     API.addQuestionsSet('thermForeign',{
         inherit : 'therm',
         name: 'Tforeign_0to10',
-        stem: 'Kako toplo ali hladno se počutite do <b><%= global.foreignLabels %></b>?'
+        stem: 'Kako toplo ali hladno se počutite do Neslovencev?'
     });
 
     API.addQuestionsSet('motivation',{
