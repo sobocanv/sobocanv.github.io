@@ -44,9 +44,9 @@ define(['pipAPI','iat10_sl.js'], function(APIConstructor, iatExtension){
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },
         attribute1 : {
-            name : 'Slabe besede',
+            name : 'Negativne besede',
             title : {
-                media : {word : 'Slabe besede'},
+                media : {word : 'Negativne besede'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
@@ -63,9 +63,9 @@ define(['pipAPI','iat10_sl.js'], function(APIConstructor, iatExtension){
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
         },
         attribute2 : {
-            name : 'Dobre besede',
+            name : 'Pozitivne besede',
             title : {
-                media : {word : 'Dobre besede'},
+                media : {word : 'Pozitivne besede'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
