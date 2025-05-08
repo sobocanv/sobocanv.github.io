@@ -18,7 +18,7 @@ define(['managerAPI',
     API.addSettings('skip',true);
 
     //Assign labels to both groups
-    //let groupSet = API.shuffle(['a','b'])[0];
+    let groupSet = ['Yes'];
     let localLabels = ['Slovenci'];
     let foreignLabels = ['Neslovenci'];
 
@@ -27,7 +27,7 @@ define(['managerAPI',
         //YBYB: change when copying back to the correct folder
         //baseURL: './images/',
         //raceSet:raceSet,
-	//groupSet:groupSet,
+	groupSet:groupSet,
         localLabels:localLabels,
         foreignLabels:foreignLabels,
 	//Select randomly what name to see.
