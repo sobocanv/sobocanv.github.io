@@ -12,6 +12,12 @@ define(['managerAPI',
 	init_data_pipe(API, 'N1NLIFf6LdYh',  {
 		file_type:'csv',
 		file_name: 'iat_${pt}_${subid}.csv'
+		format: function(rows) {
+	        // Default DataPipe turns your rows (array of arrays) into CSV text.
+	        // Here, we add the BOM at the start:
+	        const csvContent = rows.map(row => row.join(',')).join('\n');
+	        return '\uFEFF' + csvContent;
+    		}
 	});
 
     API.setName('mgr');
