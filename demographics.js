@@ -201,8 +201,17 @@ define(['questAPI'], function(Quest){
 			{text: 'Moški', value: 'moski'},
 		        {text: 'Ženska', value: 'zenska'},
 		        {text: 'Nebinarna oseba', value: 'nebinarna'},
-		        {text: 'Drugo', value: 'drugo', allowText: true}
+		        {text: 'Drugo', value: 'drugo'}
         	]
+	});
+
+	API.addQuestionsSet('gender_Identity_other', {
+	    inherit: 'basicText',
+	    name: 'gender_Identity_other',
+	    stem: 'Prosimo, navedite svojo spolno identiteto:',
+	    visibility: function(data) {
+	        return data.gender_Identity === 'drugo';
+	    }
 	});
 	
         API.addQuestionsSet('transgender', {
@@ -655,6 +664,7 @@ define(['questAPI'], function(Quest){
         inherit: 'basicPage',
         questions: [
             {inherit:'gender_Identity'},
+	    {inherit: 'gender_Identity_other'},
 	    {inherit: 'transgender'}
         ]
     },
