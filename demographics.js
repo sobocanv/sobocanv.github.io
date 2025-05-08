@@ -193,26 +193,26 @@ define(['questAPI'], function(Quest){
 	    ]
         });
 	
-        API.addQuestionsSet('gender_Identity', {
+        API.addQuestionsSet('gender_Identity', [
+	    {
 		inherit:'basicSelect',
 		name:'gender_Identity',
 		stem:'Kakšna je vaša spolna identiteta?',
 		answers: [
-			{text: 'Moški', value: 'moski'},
-		        {text: 'Ženska', value: 'zenska'},
-		        {text: 'Nebinarna oseba', value: 'nebinarna'},
-		        {text: 'Drugo', value: 'drugo'}
-        	]
-	});
-
-	API.addQuestionsSet('gender_Identity_other', {
-	    inherit: 'basicText',
-	    name: 'gender_Identity_other',
-	    stem: 'Prosimo, navedite svojo spolno identiteto:',
-	    visibility: function(data) {
-	        return data.gender_Identity === 'drugo';
+			{text: 'moški', value: 'moski'},
+		        {text: 'ženska', value: 'zenska'},
+		        {text: 'nebinarna oseba', value: 'nebinarna'},
+		        {text: 'drugo', value: 'drugo'}
+        	],
+		required: true
+	    },
+	    {
+	        type:'text',
+	        name:'gender_Identity_other',
+	        stem:'Če ste izbrali \'drugo\', prosimo vpišite svojo spolno identiteto:',
+	        ngShow: "questions.gender_Identity.response === 'drugo'"
 	    }
-	});
+	]);
 	
         API.addQuestionsSet('transgender', {
 		inherit:'basicSelect',
@@ -664,7 +664,6 @@ define(['questAPI'], function(Quest){
         inherit: 'basicPage',
         questions: [
             {inherit:'gender_Identity'},
-	    {inherit: 'gender_Identity_other'},
 	    {inherit: 'transgender'}
         ]
     },
