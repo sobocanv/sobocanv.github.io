@@ -619,7 +619,7 @@ define(['questAPI'], function(Quest){
 	});
 	
         API.addQuestionsSet('education', {
-		inherit:'basicDropdown',
+		inherit:'basicSelect',
 		name:'education',
 		stem:'Katera je vaša najvišje pridobljena stopnja izobrazbe?',
 		answers: [
