@@ -7,11 +7,11 @@ define(['questAPI'], function(Quest){
 	*/
     API.addPagesSet('basicPage',{
         noSubmit:false,
-        header: 'Demographics',
+        header: 'Demografski podatki',
         decline: true,
-        declineText: isTouch ? 'Decline' : 'Decline to Answer', 
+        declineText: isTouch ? 'Odkloni' : 'Ne želim odgovoriti', 
         autoFocus:true, 
-        progressBar: 'Page <%= pagesMeta.number %> out of 5'
+        progressBar: 'Stran <%= pagesMeta.number %> od 5'
     });
 
     /**
@@ -22,13 +22,13 @@ define(['questAPI'], function(Quest){
         required: true,
         errorMsg: {
             required: isTouch 
-                ? 'Please select an answer, or click \'Decline\'' 
-                : 'Please select an answer, or click \'Decline to Answer\''
+                ? 'Izberite odgovor ali pritisnite \'Odkloni\'' 
+                : 'Izberite odgovor ali pritisnite \'Ne želim odgovoriti\''
         },
         autoSubmit:'true',
         numericValues:'true',
         help: '<%= pagesMeta.number < pagesMeta.count %>',
-        helpText: 'Tip: For quick response, click to select your answer, and then click again to submit.'
+        helpText: 'Nasvet: Če želite odgovoriti hitreje, dvakrat pritisnite na izbrano polje.'
     });
 
     API.addQuestionsSet('basicSelect',{ inherit:'basicQ', type:'selectOne' });
@@ -196,25 +196,28 @@ define(['questAPI'], function(Quest){
         API.addQuestionsSet('gender_Identity', {
 		inherit:'basicSelect',
 		name:'gender_Identity',
-		stem:'What is your gender identity?',
+		stem:'Kakšna je vaša spolna identiteta?',
 		answers: [
-			'Woman','Man','Genderqueer, nonbinary, or agender','Not Listed Above'
+			{text: 'Moški', value: 'moski'},
+		        {text: 'Ženska', value: 'zenska'},
+		        {text: 'Nebinarna oseba', value: 'nebinarna'},
+		        {text: 'Drugo', value: 'drugo', allowText: true}
         	]
 	});
 	
         API.addQuestionsSet('transgender', {
 		inherit:'basicSelect',
 		name:'transgender',
-		stem:'Do you identify as transgender?',
+		stem:'Ali ste transspolna oseba?',
 		answers: [
-			'Yes','No','I don\'t know'
+			'Da', 'Ne', 'Ne vem'
         	]
 	});
         
 	API.addQuestionsSet('citizenship', {
 		inherit:'basicDropdown',
 		name:'citizenship',
-		stem:'What country is your primary citizenship?',
+		stem:'Katero je vaše primarno državljanstvo',
 		answers: [
 	        	{text: 'Afghanistan', value: 'Afghanistan'},
 	        	{text: 'Albania', value: 'Albania'},
@@ -416,7 +419,7 @@ define(['questAPI'], function(Quest){
         API.addQuestionsSet('current_Country', {
 		inherit:'basicDropdown',
 		name:'current_Country',
-		stem:'What country do you currently live in?',
+		stem:'V kateri državi trenutno bivate?',
 		answers: [
 		        {text: 'Afghanistan', value: 'Afghanistan'},
 		        {text: 'Albania', value: 'Albania'},
@@ -618,22 +621,15 @@ define(['questAPI'], function(Quest){
         API.addQuestionsSet('education', {
 		inherit:'basicDropdown',
 		name:'education',
-		stem:'What is your highest level of education?',
+		stem:'Katera je vaša najvišje pridobljena stopnja izobrazbe?',
 		answers: [
-			{text: 'Elementary School', value: 'Elementary School'},
-			{text: 'Junior High or Middle School', value: 'Junior High or Middle School'},
-			{text: 'Some High School', value: 'Some High School'},
-			{text: 'High School Graduate', value: 'High School Graduate'},
-			{text: 'Some College', value: 'Some College'},
-			{text: 'Associate\'s Degree', value: 'Associate\'s Degree'},
-			{text: 'Bachelor\'s Degree', value: 'Bachelor\'s Degree'},
-			{text: 'Some Graduate School', value: 'Some Graduate School'},
-			{text: 'Master\'s Degree', value: 'Master\'s Degree'},
-			{text: 'M.B.A.', value: 'M.B.A.'},
-			{text: 'J.D.', value: 'J.D.'},
-			{text: 'M.D.', value: 'M.D.'},
-			{text: 'Ph.D.', value: 'Ph.D.'},
-			{text: 'Other Advanced Degree', value: 'Other Advanced Degree'}
+			{text: 'osnovna šola', value: '1'},
+			{text: 'srednja šola', value: '2'},
+			{text: 'višja strokovna šola', value: '3'},
+			{text: 'univerzitetna diploma 1. stopnje', value: '4'},
+			{text: 'univerzitetna diploma 2. stopnje', value: '5'},
+			{text: 'druga visokošolska izobrazba', value: '6'},
+			{text: 'doktorat', value: '7'}
         	]
 	});
 
