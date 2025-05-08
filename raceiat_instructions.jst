@@ -1,24 +1,24 @@
 <%
-    var respInst = "boste uporabili tipki 'E' in 'I', da";
+    var respInst = "boste uporabili tipki 'E' in 'I'";
     if (global.$isTouch)  respInst = "boste";
 %>
 
 <div class="panel panel-info" style="margin-top:1em">
 		<div class="panel-heading">
 			<h1 class="panel-title" style="font-size:2em">
-				Navodila
+				IAT Navodila
 			</h1>
 		</div>
 </div>
 
 <div class="panel-body">
-	<p class="lead">Sedaj <%=respInst%> čim hitreje razvrstite elemente v skupine. 
-	To so štiri skupine in vsi elementi, ki se lahko pojavijo v vsaki izmed njih:</p>
+	<p class="lead">Na tipkovnici <%=respInst%> in čim hitreje razvrstili elemente v skupine.
+	Spodnji prikaz prikazuje štiri skupine in vse elemente, ki se lahko pojavijo v vsaki izmed njih.</p>
 
 	<table class="table table-bordered">
 		<tr class="active">
 			<th>Skupina</th>
-			<th>Element</th>
+			<th>Elementi</th>
 		</tr>
 		<tr>
 			<th>Pozitivne besede</th>
@@ -46,7 +46,7 @@
 		</tr>
 	</table>
 
-	<p class="lead">Naloga ima sedem delov. Navodila se za vsak del spreminjajo. Bodite pozorni!<p>
+	<p class="lead">Naloga je sestavljena iz sedmih podnalog. Navodila se pri vsaki podnalogi spremenijo. Bodite pozorni!<p>
 
 	<div class="text-center proceed" style="margin: 30px auto 10px;">
 		<button pi-message-done type="button" class="btn btn-primary">
