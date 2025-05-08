@@ -623,13 +623,13 @@ define(['questAPI'], function(Quest){
 		name:'education',
 		stem:'Katera je vaša najvišje pridobljena stopnja izobrazbe?',
 		answers: [
-			{text: 'osnovna šola', value: '1'},
-			{text: 'srednja šola', value: '2'},
-			{text: 'višja strokovna šola', value: '3'},
-			{text: 'univerzitetna diploma 1. stopnje', value: '4'},
-			{text: 'univerzitetna diploma 2. stopnje', value: '5'},
-			{text: 'druga visokošolska izobrazba', value: '6'},
-			{text: 'doktorat', value: '7'}
+			{text: 'Osnovna šola', value: '1'},
+			{text: 'Srednja šola', value: '2'},
+			{text: 'Višja strokovna šola', value: '3'},
+			{text: 'Univerzitetna diploma 1. stopnje', value: '4'},
+			{text: 'Univerzitetna diploma 2. stopnje', value: '5'},
+			{text: 'Druga visokošolska izobrazba', value: '6'},
+			{text: 'Doktorat', value: '7'}
         	]
 	});
 
