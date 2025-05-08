@@ -9,7 +9,7 @@ define(['questAPI'], function(Quest){
         noSubmit:false, //Change to true if you don't want to show the submit button.
         header: 'Vprašalnik',
         decline: true,
-        declineText: isTouch ? 'Preskoči' : 'Nočem odgovoriti', 
+        declineText: isTouch ? 'Odkloni' : 'Ne želim odgovoriti', 
         autoFocus:true, 
         progressBar:  'Stran <%= pagesMeta.number %> od 4'
     });
@@ -22,13 +22,13 @@ define(['questAPI'], function(Quest){
         required : true, 		
         errorMsg: {
             required: isTouch 
-                ? 'Prosimo, izberite ustrezni odgovor ali pritisnite na gumb \'Preskoči\'' 
-                : 'Prosimo, izberite ustrezni odgovor ali pritisnite na gumb \'Nočem odgovoriti\''
+                ? 'Izberite odgovor ali pritisnite \'Odkloni\'' 
+                : 'Izberite odgovor ali pritisnite \'Ne želim odgovoriti\''
         },
         autoSubmit:'true',
         numericValues:'true',
         help: '<%= pagesMeta.number < 3 %>',
-        helpText: 'Nasvet: Če želite odgovoriti hitreje, pritisnite na izbrani odziv dvakrat.'
+        helpText: 'Nasvet: Če želite odgovoriti hitreje, dvakrat pritisnite na izbrano polje.'
     });
 
     API.addQuestionsSet('basicSelect',{
@@ -62,13 +62,13 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('explicitMotivation',{
         inherit : 'basicSelect',
         answers: [
-            {text:'Močno se strinjam', value:7},
-            {text:'Zmerno se strinjam', value:6},
+            {text:'Popolnoma se strinjam', value:7},
+            {text:'Deloma se strinjam', value:6},
             {text:'Rahlo se strinjam', value:5},
-            {text:'Nevtralen', value:4},
+            {text:'Niti se strinjam, niti se ne strinjam', value:4},
             {text:'Rahlo se ne strinjam', value:3},
-            {text:'Zmerno se ne strinjam', value:2},
-            {text:'Močno se ne strinjam', value:1}
+            {text:'Deloma se ne strinjam', value:2},
+            {text:'Sploh se ne strinjam', value:1}
         ]
     });
 	
@@ -78,15 +78,15 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('attributes7',{
         inherit : 'basicSelect',
         name: 'attributes7',
-        stem: 'Katera izjava vas najbolje opisuje?',
+        stem: 'Katera trditev vas najbolje opiše?',
         answers: [
-            {text:'Močno raje imam Slovence kot Neslovence.',value:7},
-            {text:'Zmerno raje imam Slovence kot Neslovence.',value:6},
-            {text:'Nekoliko raje imam Slovence kot Neslovence.',value:5},
-            {text:'Enako rad imam Slovence in Neslovence.',value:4},
-            {text:'Nekoliko raje imam Neslovence kot Slovence.',value:3},
-            {text:'Zmerno raje imam Neslovence kot Slovence.',value:2},
-            {text:'Močno raje imam Neslovence kot Slovence.',value:1}
+            {text:'Precej raje imam Slovence kot Neslovence.',value:7},
+            {text:'Nekoliko raje imam Slovence kot Neslovence.',value:6},
+            {text:'Malce raje imam Slovence kot Neslovence.',value:5},
+            {text:'Enako rad/a imam Slovence kot Neslovence.',value:4},
+            {text:'Malce raje imam Neslovence kot Slovence.',value:3},
+            {text:'Nekoliko raje imam Neslovence kot Slovence.',value:2},
+            {text:'Precej raje imam Neslovence kot Slovence.',value:1}
         ]
     });
 	
@@ -105,7 +105,7 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('motivation',{
         inherit: 'explicitMotivation',
         name: 'motivation',
-        stem: 'I try to appear nonprejudiced toward Foreigners.'
+        stem: 'Do tujcev skušam biti nepristranski/a.'
     });
 
     API.addSequence([
