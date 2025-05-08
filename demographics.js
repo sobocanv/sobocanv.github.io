@@ -195,22 +195,26 @@ define(['questAPI'], function(Quest){
 	
         API.addQuestionsSet('gender_Identity', [
 	    {
-		inherit:'basicSelect',
-		name:'gender_Identity',
-		stem:'Kakšna je vaša spolna identiteta?',
-		answers: [
-			{text: 'moški', value: 'moski'},
-		        {text: 'ženska', value: 'zenska'},
-		        {text: 'nebinarna oseba', value: 'nebinarna'},
-		        {text: 'drugo', value: 'drugo'}
-        	],
-		required: true
+	        inherit: 'basicSelect',
+	        name: 'gender_Identity',
+	        stem: 'Kakšna je vaša spolna identiteta?',
+	        answers: [
+	            {text: 'Moški', value: 'moski'},
+	            {text: 'Ženska', value: 'zenska'},
+	            {text: 'Nebinarna oseba', value: 'nebinarna'},
+	            {text: 'Drugo', value: 'drugo'}
+	        ],
+	        required: true
 	    },
 	    {
-	        type:'text',
-	        name:'gender_Identity_other',
-	        stem:'Če ste izbrali \'drugo\', prosimo vpišite svojo spolno identiteto:',
-	        ngShow: "questions.gender_Identity.response === 'drugo'"
+	        type: 'text',
+	        name: 'gender_Identity_other',
+	        stem: 'Če ste izbrali \'Drugo\', prosimo vpišite svojo spolno identiteto:',
+	        ngShow: "questions.gender_Identity.response === 'drugo'",  // Only show if 'Drugo' is selected
+	        required: true,
+	        errorMsg: {
+	            required: 'Prosimo, odgovorite na vprašanje.'
+	        }
 	    }
 	]);
 	
