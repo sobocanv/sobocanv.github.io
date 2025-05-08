@@ -44,9 +44,18 @@ define(['questAPI'], function(Quest){
 	    style:'multiButtons',
 	    minWidth:'7.8%',
 	    answers: [
-            	'Januar', 'Februar', 'Marec', 'April',
-		'Maj', 'Junij', 'Julij', 'Avgust',
-		'September', 'Oktober', 'November', 'December'
+            	{text: 'Januar', value: 'januar'},
+    		{text: 'Februar', value: 'februar'},
+		{text: 'Marec', value: 'marec'},
+		{text: 'April', value: 'april'},
+		{text: 'Maj', value: 'maj'},
+		{text: 'Junij', value: 'junij'},
+		{text: 'Julij', value: 'julij'},
+		{text: 'Avgust', value: 'avgust'},
+		{text: 'September', value: 'september'},
+		{text: 'Oktober', value: 'oktober'},
+		{text: 'November', value: 'november'},
+		{text: 'December', value: 'december'}
             ]
     });
 	
