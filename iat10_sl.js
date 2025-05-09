@@ -164,8 +164,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			
 			instWidth : 99, //The width of the instructions stimulus
 			
-			finalText : 'Pritisnite preslednico in nadaljujte z naslednjo nalogo', 
-			finalTouchText : 'Dotaknite se spodnjega zelenega območja in nadaljujte z naslednjo nalogo',
+			finalText : 'Za nadaljevanje pritisnite preslednico', 
+			finalTouchText : 'Za nadaljevanje se dotaknite spodnjega zelenega območja',
 
 			touchMaxStimulusWidth : '50%', 
 			touchMaxStimulusHeight : '50%', 
@@ -179,11 +179,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Levi prst postavite na tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#0000ff">leftAttribute</font>.' +
-				'<br/>Desni prst postavite na tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+				'Pritisnite tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#0000ff">leftAttribute</font>.' +
+				'<br/>Pritisnite tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
 				'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. ' +
 				'Za nadaljevanje pritisnite drugo tipko.<br/>' +
-				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>'+
+				'<u>Odgovarjajte čim hitreje</u>, vendar natančno.<br/><br/></p>'+
 				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instAttributePracticeTouch: [
 				'<div>',
@@ -192,11 +192,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Levi prst postavite na  <b>levo</b> zeleno območje za elemente, ki spadajo v skupino <font color="#0000ff">leftAttribute</font>.<br/>',
-						'Desni prst postavite na <b>desno</b> zeleno območje za elemente, ki spadajo v skupino <font color="#0000ff">rightAttribute</font>.<br/>',
+						'Dotaknite se <b>levega</b> zelenega območja za elemente, ki spadajo v skupino <font color="#0000ff">leftAttribute</font>.<br/>',
+						'Dotaknite se <b>desnega</b> zelenega območja za elemente, ki spadajo v skupino <font color="#0000ff">rightAttribute</font>.<br/>',
 						'Elementi se bodo pojavili posamično.<br/>',
 						'<br/>',
-						'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Dotaknite se druge strani. <u>Bodite čim hitrejši</u> in natančni.',
+						'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Za nadaljevanje se dotaknite druge strani. <u>Odgovarjajte čim hitreje</u>, vendar natančno.',
 					'</p>',
 					'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
@@ -205,12 +205,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Levi prst postavite na tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font>. ' +
-				'<br/>Desni prst postavite na tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font>.<br/>' +
+				'Pritisnite tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font>. ' +
+				'<br/>Pritisnite tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font>.<br/>' +
 				'Elementi se bodo pojavili posamično.<br/><br/>' +
 				'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. ' +
 				'Za nadaljevanje pritisnite drugo tipko.<br/>' +
-				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>'+
+				'<u>Odgovarjajte čim hitreje</u>, vendar natančno.<br/><br/></p>'+
 				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instCategoriesPracticeTouch: [
 				'<div>',
@@ -219,11 +219,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Levi prst postavite na <b>levo</b> zeleno območje za elemente <font color="#336600">leftCategory</font>.<br/>',
-						'Desni prst postavite na <b>desno</b> zeleno območje za elemente <font color="#336600">rightCategory</font>.<br/>',
+						'Dotaknite se <b>levega</b> zelenega območja za elemente <font color="#336600">leftCategory</font>.<br/>',
+						'Dotaknite se <b>desnega</b> zelenega območja za elemente <font color="#336600">rightCategory</font>.<br/>',
 						'Elementi se bodo pojavili posamično.<br/>',
 						'<br/>',
-						'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Dotaknite se druge strani. <u>Bodite čim hitrejši</u> in natančni.',
+						'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Za nadaljevanje se dotaknite druge strani. <u>Odgovarjajte čim hitreje</u>, vendar natančno.',
 					'</p>',
 					'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
@@ -234,10 +234,10 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'Pritisnite tipko <b>E</b> za <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.<br/>' +
 				'Pritisnite tipko <b>I</b> za <font color="#336600">rightCategory</font> in za  <font color="#0000ff">rightAttribute</font>.<br/>' +
-				'Vsak element spada le v eno skupino.<br/><br/>' +
+				'Vsak element spada samo v eno skupino.<br/><br/>' +
 				'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. ' +
 				'Za nadaljevanje pritisnite drugo tipko.<br/>' + 
-				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>' +
+				'<u>Odgovarjajte čim hitreje</u>, vendar natančno.<br/><br/></p>' +
 				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instFirstCombinedTouch:[
 				'<div>',
@@ -247,9 +247,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 					'<br/>',
 					'<p align="left" style="margin-left:5px">',
-						'Levi prst postavite na <b>levo</b> zeleno območje za elemente <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.</br>',
-						'Desni prst postavite na <b>desno</b> zeleno območje za elemente <font color="#336600">rightCategory</font> in za <font color="#0000ff">rightAttribute</font>.</br>',
-							'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Dotaknite se druge strani. <u>Bodite čim hitrejši</u> in natančni.</br>',
+						'Dotaknite se <b>levega</b> zelenega območja za elemente <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.</br>',
+						'Dotaknite se <b>desnega</b> zelenega območje za elemente <font color="#336600">rightCategory</font> in za <font color="#0000ff">rightAttribute</font>.</br>',
+							'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Za nadaljevanje se dotaknite druge strani. <u>Odgovarjajte čim hitreje</u>, vendar natančno.</br>',
 						'</p>',
 						'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
@@ -261,8 +261,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'Ta del je enak prejšnjemu.<br/>' +
 				'Pritisnite tipko <b>E</b> za <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.<br/>' +
 				'Pritisnite tipko <b>I</b> za <font color="#336600">rightCategory</font> in za  <font color="#0000ff">rightAttribute</font>.<br/>' +
-				'Vsak element spada le v eno skupino.<br/><br/>' +
-				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>' +
+				'Vsak element spada samo v eno skupino.<br/><br/>' +
+				'<u>Odgovarjajte čim hitreje</u>, vendar natančno.<br/><br/></p>' +
 				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instSecondCombinedTouch:[
 				'<div>',
@@ -271,10 +271,10 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 
 					'<p align="left" style="margin-left:5px">',
-						'Levi prst postavite na <b>levo</b> zeleno območje za elemente <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.</br>',
-						'Desni prst postavite na <b>desno</b> zeleno območje za elemente <font color="#336600">rightCategory</font> in za <font color="#0000ff">rightAttribute</font>.</br>',
+						'Dotaknite se <b>levega</b> zelenega območja za elemente <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.</br>',
+						'Dotaknite se <b>desnega</b> zelenega območja za elemente <font color="#336600">rightCategory</font> in za <font color="#0000ff">rightAttribute</font>.</br>',
 						'<br/>',
-						'<u>Bodite čim hitrejši</u> in natančni.<br/>',
+						'<u>Odgovarjajte čim hitreje</u>, vendar natančno.<br/>',
 					'</p>',
 					'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
@@ -283,10 +283,10 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'<b>Bodite pozorni, oznaki sta spremenili položaj!</b><br/></b><br/>' +
-				'Levi prst postavite na tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font>.<br/>' +
-				'Desni prst postavite na tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font>.<br/><br/>' +
-				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>' +
+				'<b>Bodite pozorni, oznaki sta zamenjali položaj!</b><br/></b><br/>' +
+				'Pritisnite tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font>.<br/>' +
+				'Pritisnite tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font>.<br/><br/>' +
+				'<u>Odgovarjajte čim hitreje</u>, vendar natančno.<br/><br/></p>' +
 				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instSwitchCategoriesTouch: [
 				'<div>',
@@ -295,12 +295,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Bodite pozorni, oznaki sta spremenili položaj!<br/>',
-							'Levi prst postavite na <b>levo</b> zeleno območje za elemente <font color="#336600">leftCategory</font>.<br/>',
-							'Desni prst postavite na <b>desno</b> zeleno območje za elemente <font color="#336600">rightCategory</font>.<br/>',
+						'Bodite pozorni, oznaki sta zamenjali položaj!<br/>',
+							'Dotaknite se <b>levega</b> zelenega območja za elemente <font color="#336600">leftCategory</font>.<br/>',
+							'Dotaknite se <b>desnega</b> zelenega območja za elemente <font color="#336600">rightCategory</font>.<br/>',
 							'Elementi se bodo pojavili posamično.',
 							'<br/>',
-							'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Dotaknite se druge strani. <u>Bodite čim hitrejši</u> in natančni.<br/>',
+							'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Za nadaljevanje se dotaknite druge strani. <u>Odgovarjajte čim hitreje</u>, vendar natančno.<br/>',
 						'</p>',
 						'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
@@ -319,15 +319,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic preference for categoryB over categoryA.',
 			//fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic preference for categoryB over categoryA.',
 			//fb_equal_CatAvsCatB : 'Your responses suggested no automatic preference between categoryA and categoryB.',
-			fb_strong_Att1WithCatA_Att2WithCatB : "Precej hitrejši ste bili pri razvrščanju 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' kot pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
-			fb_moderate_Att1WithCatA_Att2WithCatB : "Zmerno hitrejši ste bili pri razvrščanju 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' kot pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
-			fb_slight_Att1WithCatA_Att2WithCatB : "Nekoliko hitrejši ste bili pri razvrščanju 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' kot pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
-			fb_equal_CatAvsCatB : "Približno enako hitro ste razvrstili 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' in pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
+			fb_strong_Att1WithCatA_Att2WithCatB : "Precej hitrejše ste razvrščali 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' kot pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
+			fb_moderate_Att1WithCatA_Att2WithCatB : "Nekoliko hitrejše ste razvrščali 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' kot pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
+			fb_slight_Att1WithCatA_Att2WithCatB : "Malce hitrejše ste razvrščali 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' kot pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
+			fb_equal_CatAvsCatB : "Približno enako hitro ste razvrstili 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' ter 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
 
 			//Error messages in the feedback
-			manyErrors: 'Storili ste preveč napak, da bi lahko določili rezultat.',
-			tooFast: 'Prehitro ste reševali, da bi lahko določili rezultat.',
-			notEnough: 'Preveč vprašanj ste preskočili, da bi lahko določili rezultat.'
+			manyErrors: 'Zaradi prevelikega števila napak ni bilo mogoče določiti rezultata.',
+			tooFast: 'Zaradi prevelikega števila poskusov ni bilo mogoče določiti rezultata.',
+			notEnough: 'Zaradi premajhnega števila poskusov ni bilo mogoče določiti rezultata.'
 		};
 
 		// extend the "current" object with the default
