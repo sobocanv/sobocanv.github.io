@@ -249,7 +249,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<p align="left" style="margin-left:5px">',
 						'Levi prst postavite na <b>levo</b> zeleno območje za elemente <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.</br>',
 						'Desni prst postavite na <b>desno</b> zeleno območje za elemente <font color="#336600">rightCategory</font> in za <font color="#0000ff">rightAttribute</font>.</br>',
-							'Če naredite napako, se bo prikazal  rdeč <font color="#ff0000"><b>X</b></font>. Dotaknite se druge strani. <u>Bodite čim hitrejši</u> in natančni.</br>',
+							'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Dotaknite se druge strani. <u>Bodite čim hitrejši</u> in natančni.</br>',
 						'</p>',
 						'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
@@ -258,12 +258,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'This is the same as the previous part.<br/>' +
-				'Use the <b>E</b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Use the <b>I</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
-				'Each item belongs to only one category.<br/><br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Ta del je enak prejšnjemu.<br/>' +
+				'Pritisnite tipko <b>E</b> za <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'Pritisnite tipko <b>I</b> za <font color="#336600">rightCategory</font> in za  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'Vsak element spada le v eno skupino.<br/><br/>' +
+				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>' +
+				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instSecondCombinedTouch:[
 				'<div>',
 					'<p align="center"><u>Part blockNum of nBlocks</u></p>',
@@ -271,23 +271,23 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 
 					'<p align="left" style="margin-left:5px">',
-						'Put a left finger over the <b>left</b> green area for <font color="#336600">leftCategory</font> items and for <font color="#0000ff">leftAttribute</font>.<br/>',
-						'Put a right finger over the <b>right</b> green area for <font color="#336600">rightCategory</font> items and for <font color="#0000ff">rightAttribute</font>.<br/>',
+						'Levi prst postavite na <b>levo</b> zeleno območje za elemente <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.</br>',
+						'Desni prst postavite na <b>desno</b> zeleno območje za elemente <font color="#336600">rightCategory</font> in za <font color="#0000ff">rightAttribute</font>.</br>',
 						'<br/>',
-						'<u>Go as fast as you can</u> while being accurate.<br/>',
+						'<u>Bodite čim hitrejši</u> in natančni.<br/>',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
 			].join('\n'),
 
 			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'<b>Watch out, the labels have changed position!</b><br/>' +
-				'Use the left finger on the <b>E</b> key for <font color="#336600">leftCategory</font>.<br/>' +
-				'Use the right finger on the <b>I</b> key for <font color="#336600">rightCategory</font>.<br/><br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'<b>Bodite pozorni, oznaki sta spremenili položaj!</b><br/></b><br/>' +
+				'Levi prst postavite na tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font>.<br/>' +
+				'Desni prst postavite na tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font>.<br/><br/>' +
+				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>' +
+				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instSwitchCategoriesTouch: [
 				'<div>',
 					'<p align="center">',
@@ -295,14 +295,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Watch out, the labels have changed position!<br/>',
-							'Put a left finger over the <b>left</b> green area for <font color="#336600">leftCategory</font> items.<br/>',
-							'Put a right finger over the <b>right</b> green area for <font color="#336600">rightCategory</font> items.<br/>',
-							'Items will appear one at a time.',
+						'Bodite pozorni, oznaki sta spremenili položaj!<br/>',
+							'Levi prst postavite na <b>levo</b> zeleno območje za elemente <font color="#336600">leftCategory</font>.<br/>',
+							'Desni prst postavite na <b>desno</b> zeleno območje za elemente <font color="#336600">rightCategory</font>.<br/>',
+							'Elementi se bodo pojavili posamično.',
 							'<br/>',
-							'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.<br/>',
+							'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Dotaknite se druge strani. <u>Bodite čim hitrejši</u> in natančni.<br/>',
 						'</p>',
-						'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+						'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
 			].join('\n'),
 
@@ -319,15 +319,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic preference for categoryB over categoryA.',
 			//fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic preference for categoryB over categoryA.',
 			//fb_equal_CatAvsCatB : 'Your responses suggested no automatic preference between categoryA and categoryB.',
-			fb_strong_Att1WithCatA_Att2WithCatB : "You were much faster at sorting 'categoryA' with 'attribute1' and 'categoryB' with 'attribute2' than 'categoryB' with 'attribute1' and 'categoryA' with 'attribute2'",
-			fb_moderate_Att1WithCatA_Att2WithCatB : "You were moderately faster at sorting 'categoryA' with 'attribute1' and 'categoryB' with 'attribute2' than 'categoryB' with 'attribute1' and 'categoryA' with 'attribute2'",
-			fb_slight_Att1WithCatA_Att2WithCatB : "You were slightly faster at sorting 'categoryA' with 'attribute1' and 'categoryB' with 'attribute2' than 'categoryB' with 'attribute1' and 'categoryA' with 'attribute2'",
-			fb_equal_CatAvsCatB : "You were about equally fast at sorting 'categoryA' with 'attribute1' and 'categoryB' with 'attribute2' and at sorting 'categoryB' with 'attribute1' and 'categoryA' with 'attribute2'.",
+			fb_strong_Att1WithCatA_Att2WithCatB : "Precej hitrejši ste bili pri razvrščanju 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' kot pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
+			fb_moderate_Att1WithCatA_Att2WithCatB : "Zmerno hitrejši ste bili pri razvrščanju 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' kot pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
+			fb_slight_Att1WithCatA_Att2WithCatB : "Nekoliko hitrejši ste bili pri razvrščanju 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' kot pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
+			fb_equal_CatAvsCatB : "Približno enako hitro ste razvrstili 'categoryA' z 'attribute1' in 'categoryB' z 'attribute2' in pri 'categoryB' z 'attribute1' in 'categoryA' z 'attribute2'.",
 
 			//Error messages in the feedback
-			manyErrors: 'There were too many errors made to determine a result.',
-			tooFast: 'There were too many fast trials to determine a result.',
-			notEnough: 'There were not enough trials to determine a result.'
+			manyErrors: 'Storili ste preveč napak, da bi lahko določili rezultat.',
+			tooFast: 'Prehitro ste reševali, da bi lahko določili rezultat.',
+			notEnough: 'Preveč vprašanj ste preskočili, da bi lahko določili rezultat.'
 		};
 
 		// extend the "current" object with the default
