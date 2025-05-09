@@ -139,12 +139,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			remindError : true,
 
 			remindErrorText : '<p align="center" style="font-size:1em; font-family:arial; color:#000000">' +
-			'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-			'Press the other key to continue.<p/>',
+			'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. ' +
+			'Za nadaljevanje pritisnite drugo tipko.<p/>',
 
 			remindErrorTextTouch : '<p align="center" style="font-size:1.4em; font-family:arial; color:#000000">' +
-			'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-			'Touch the other side to continue.<p/>',
+			'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. ' +
+			'Za nadaljevanje pritisnite na drugo stran.<p/>',
 
 			errorCorrection : true, //Should participants correct error responses?
 			errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
@@ -155,17 +155,17 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			leftKey : 'e', 
 			rightKey: 'i',
 			//Text and style for key instructions displayed about the category labels.
-			leftKeyText : 'Press "E" for', 
-			rightKeyText : 'Press "I" for', 
+			leftKeyText : 'Pritisnite "E" za', 
+			rightKeyText : 'Pritisnite "I" za', 
 			keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'},
 			//Text and style for the separator between the top and bottom category labels.
-			orText : 'or', 
+			orText : 'ali', 
 			orCss : {'font-size':'1.8em', color:'#000000'},
 			
 			instWidth : 99, //The width of the instructions stimulus
 			
-			finalText : 'Press space to continue to the next task', 
-			finalTouchText : 'Touch the bottom green area to continue to the next task',
+			finalText : 'Pritisnite preslednico in nadaljujte z naslednjo nalogo', 
+			finalTouchText : 'Dotaknite se spodnjega zelenega območja in nadaljujte z naslednjo nalogo',
 
 			touchMaxStimulusWidth : '50%', 
 			touchMaxStimulusHeight : '50%', 
@@ -179,12 +179,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
-				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Levi prst postavite na tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#0000ff">leftAttribute</font>.' +
+				'<br/>Desni prst postavite na tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+				'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. ' +
+				'Za nadaljevanje pritisnite drugo tipko.<br/>' +
+				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>'+
+				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instAttributePracticeTouch: [
 				'<div>',
 					'<p align="center">',
@@ -192,26 +192,26 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Put a left finger over the the <b>left</b> green area for items that belong to the category <font color="#0000ff">leftAttribute</font>.<br/>',
-						'Put a right finger over the <b>right</b> green area for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/>',
-						'Items will appear one at a time.<br/>',
+						'Levi prst postavite na  <b>levo</b> zeleno območje za elemente, ki spadajo v skupino <font color="#0000ff">leftAttribute</font>.<br/>',
+						'Desni prst postavite na <b>desno</b> zeleno območje za elemente, ki spadajo v skupino <font color="#0000ff">rightAttribute</font>.<br/>',
+						'Elementi se bodo pojavili posamično.<br/>',
 						'<br/>',
-						'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.',
+						'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Dotaknite se druge strani. <u>Bodite čim hitrejši</u> in natančni.',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
 			].join('\n'),
 
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#336600">leftCategory</font>. ' +
-				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#336600">rightCategory</font>.<br/>' +
-				'Items will appear one at a time.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Levi prst postavite na tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font>. ' +
+				'<br/>Desni prst postavite na tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font>.<br/>' +
+				'Elementi se bodo pojavili posamično.<br/><br/>' +
+				'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. ' +
+				'Za nadaljevanje pritisnite drugo tipko.<br/>' +
+				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>'+
+				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instCategoriesPracticeTouch: [
 				'<div>',
 					'<p align="center">',
@@ -219,26 +219,26 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Put a left finger over the <b>left</b> green area for items that belong to the category <font color="#336600">leftCategory</font>.<br/>',
-						'Put a right finger over the <b>right</b> green area for items that belong to the category <font color="#336600">rightCategory</font>.<br/>',
-						'Items will appear one at a time.<br/>',
+						'Levi prst postavite na <b>levo</b> zeleno območje za elemente <font color="#336600">leftCategory</font>.<br/>',
+						'Desni prst postavite na <b>desno</b> zeleno območje za elemente <font color="#336600">rightCategory</font>.<br/>',
+						'Elementi se bodo pojavili posamično.<br/>',
 						'<br/>',
-						'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.',
+						'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Dotaknite se druge strani. <u>Bodite čim hitrejši</u> in natančni.',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
 			].join('\n'),
 
 			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Use the <b>E</b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Use the <b>I</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
-				'Each item belongs to only one category.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' + 
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Pritisnite tipko <b>E</b> za <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'Pritisnite tipko <b>I</b> za <font color="#336600">rightCategory</font> in za  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'Vsak element spada le v eno skupino.<br/><br/>' +
+				'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. ' +
+				'Za nadaljevanje pritisnite drugo tipko.<br/>' + 
+				'<u>Bodite čim hitrejši</u> in natančni.<br/><br/></p>' +
+				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instFirstCombinedTouch:[
 				'<div>',
 					'<p align="center">',
@@ -247,11 +247,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 					'<br/>',
 					'<p align="left" style="margin-left:5px">',
-						'Put a left finger over the <b>left</b> green area for <font color="#336600">leftCategory</font> items and for <font color="#0000ff">leftAttribute</font>.</br>',
-						'Put a right finger over the <b>right</b> green area for <font color="#336600">rightCategory</font> items and for <font color="#0000ff">rightAttribute</font>.</br>',
-							'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.</br>',
+						'Levi prst postavite na <b>levo</b> zeleno območje za elemente <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.</br>',
+						'Desni prst postavite na <b>desno</b> zeleno območje za elemente <font color="#336600">rightCategory</font> in za <font color="#0000ff">rightAttribute</font>.</br>',
+							'Če naredite napako, se bo prikazal  rdeč <font color="#ff0000"><b>X</b></font>. Dotaknite se druge strani. <u>Bodite čim hitrejši</u> in natančni.</br>',
 						'</p>',
-						'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+						'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
 				'</div>'
 			].join('\n'),
 
