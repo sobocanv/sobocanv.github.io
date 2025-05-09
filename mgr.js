@@ -115,7 +115,7 @@ define(['managerAPI',
         }],
 		
 		//This task waits until the data are sent to the server.
-        uploading: uploading_task({header: 'Samo trenutek', body:'Prosimo počakajte, pošiljanje podatkov ...'})
+        uploading: uploading_task({header: 'Samo trenutek', body:'Prosimo, počakajte, podatki se pošiljajo ...'})
     });
 
     API.addSequence([
