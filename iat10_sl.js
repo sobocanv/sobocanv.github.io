@@ -144,7 +144,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 
 			remindErrorTextTouch : '<p align="center" style="font-size:1.4em; font-family:arial; color:#000000">' +
 			'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. ' +
-			'Za nadaljevanje pritisnite na drugo stran.<p/>',
+			'Za nadaljevanje se dotaknite druge strani.<p/>',
 
 			errorCorrection : true, //Should participants correct error responses?
 			errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
@@ -177,7 +177,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			// leftCategory, rightCategory, leftAttribute and rightAttribute, blockNum, nBlocks.
 			// Notice that this is HTML text.
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Naloga blockNum od nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'Pritisnite tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#0000ff">leftAttribute</font>.' +
 				'<br/>Pritisnite tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
@@ -188,7 +188,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instAttributePracticeTouch: [
 				'<div>',
 					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
+						'<u>Naloga blockNum od nBlocks</u>',
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
@@ -203,7 +203,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			].join('\n'),
 
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Naloga blockNum od nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'Pritisnite tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font>. ' +
 				'<br/>Pritisnite tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font>.<br/>' +
@@ -215,7 +215,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instCategoriesPracticeTouch: [
 				'<div>',
 					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
+						'<u>Naloga blockNum od nBlocks</u>',
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
@@ -230,7 +230,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			].join('\n'),
 
 			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Naloga blockNum od nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'Pritisnite tipko <b>E</b> za <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.<br/>' +
 				'Pritisnite tipko <b>I</b> za <font color="#336600">rightCategory</font> in za  <font color="#0000ff">rightAttribute</font>.<br/>' +
@@ -242,7 +242,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instFirstCombinedTouch:[
 				'<div>',
 					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
+						'<u>Naloga blockNum od nBlocks</u>',
 					'</p>',
 					'<br/>',
 					'<br/>',
@@ -256,7 +256,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			].join('\n'),
 
 			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Naloga blockNum od nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'Ta del je enak prejšnjemu.<br/>' +
 				'Pritisnite tipko <b>E</b> za <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.<br/>' +
@@ -266,7 +266,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
 			instSecondCombinedTouch:[
 				'<div>',
-					'<p align="center"><u>Part blockNum of nBlocks</u></p>',
+					'<p align="center"><u>Naloga blockNum od nBlocks</u></p>',
 					'<br/>',
 					'<br/>',
 
@@ -281,7 +281,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			].join('\n'),
 
 			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Naloga blockNum od nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'<b>Bodite pozorni, oznaki sta zamenjali položaj!</b><br/></b><br/>' +
 				'Pritisnite tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font>.<br/>' +
@@ -291,7 +291,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instSwitchCategoriesTouch: [
 				'<div>',
 					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
+						'<u>Naloga blockNum od nBlocks</u>',
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
