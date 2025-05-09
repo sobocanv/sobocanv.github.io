@@ -44,18 +44,18 @@ define(['questAPI'], function(Quest){
 	    style:'multiButtons',
 	    minWidth:'7.8%',
 	    answers: [
-            	{text: 'januar', value: 'januar'},
-    		{text: 'februar', value: 'februar'},
-		{text: 'marec', value: 'marec'},
-		{text: 'april', value: 'april'},
-		{text: 'maj', value: 'maj'},
-		{text: 'junij', value: 'junij'},
-		{text: 'julij', value: 'julij'},
-		{text: 'avgust', value: 'avgust'},
-		{text: 'september', value: 'september'},
-		{text: 'oktober', value: 'oktober'},
-		{text: 'november', value: 'november'},
-		{text: 'december', value: 'december'}
+            	{text: 'Januar', value: 'januar'},
+    		{text: 'Februar', value: 'februar'},
+		{text: 'Marec', value: 'marec'},
+		{text: 'April', value: 'april'},
+		{text: 'Maj', value: 'maj'},
+		{text: 'Junij', value: 'junij'},
+		{text: 'Julij', value: 'julij'},
+		{text: 'Avgust', value: 'avgust'},
+		{text: 'September', value: 'september'},
+		{text: 'Oktober', value: 'oktober'},
+		{text: 'November', value: 'november'},
+		{text: 'December', value: 'december'}
             ]
     });
 	
