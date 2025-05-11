@@ -232,8 +232,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Naloga blockNum od nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Pritisnite tipko <b>E</b> za <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Pritisnite tipko <b>I</b> za <font color="#336600">rightCategory</font> in za  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'Pritisnite tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font> in <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'Pritisnite tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font> in <font color="#0000ff">rightAttribute</font>.<br/>' +
 				'Vsak element spada samo v eno skupino.<br/><br/>' +
 				'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. ' +
 				'Za nadaljevanje pritisnite drugo tipko.<br/>' + 
@@ -247,8 +247,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 					'<br/>',
 					'<p align="left" style="margin-left:5px">',
-						'Dotaknite se <b>levega</b> zelenega območja za elemente <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.</br>',
-						'Dotaknite se <b>desnega</b> zelenega območje za elemente <font color="#336600">rightCategory</font> in za <font color="#0000ff">rightAttribute</font>.</br>',
+						'Dotaknite se <b>levega</b> zelenega območja za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font> in <font color="#0000ff">leftAttribute</font>.</br>',
+						'Dotaknite se <b>desnega</b> zelenega območje za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font> in <font color="#0000ff">rightAttribute</font>.</br>',
 							'Če naredite napako, se bo prikazal rdeč <font color="#ff0000"><b>X</b></font>. Za nadaljevanje se dotaknite druge strani. <u>Odgovarjajte čim hitreje</u>, vendar natančno.</br>',
 						'</p>',
 						'<p align="center">Ko ste pripravljeni, se dotaknite <b>spodnjega</b> zelenega območja.</p>',
@@ -258,9 +258,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Naloga blockNum od nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Ta del je enak prejšnjemu.<br/>' +
-				'Pritisnite tipko <b>E</b> za <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Pritisnite tipko <b>I</b> za <font color="#336600">rightCategory</font> in za  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'Ta naloga je enaka prejšnji.<br/>' +
+				'Pritisnite tipko <b>E</b> za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font> in <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'Pritisnite tipko <b>I</b> za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font> in <font color="#0000ff">rightAttribute</font>.<br/>' +
 				'Vsak element spada samo v eno skupino.<br/><br/>' +
 				'<u>Odgovarjajte čim hitreje</u>, vendar natančno.<br/><br/></p>' +
 				'<p align="center">Ko ste pripravljeni, pritisnite <b>preslednico</b>.</font></p></div>',
@@ -271,8 +271,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 
 					'<p align="left" style="margin-left:5px">',
-						'Dotaknite se <b>levega</b> zelenega območja za elemente <font color="#336600">leftCategory</font> in za <font color="#0000ff">leftAttribute</font>.</br>',
-						'Dotaknite se <b>desnega</b> zelenega območja za elemente <font color="#336600">rightCategory</font> in za <font color="#0000ff">rightAttribute</font>.</br>',
+						'Dotaknite se <b>levega</b> zelenega območja za elemente, ki spadajo v skupino <font color="#336600">leftCategory</font> in <font color="#0000ff">leftAttribute</font>.</br>',
+						'Dotaknite se <b>desnega</b> zelenega območja za elemente, ki spadajo v skupino <font color="#336600">rightCategory</font> in <font color="#0000ff">rightAttribute</font>.</br>',
 						'<br/>',
 						'<u>Odgovarjajte čim hitreje</u>, vendar natančno.<br/>',
 					'</p>',
