@@ -44,18 +44,18 @@ define(['questAPI'], function(Quest){
 	    style:'multiButtons',
 	    minWidth:'7.8%',
 	    answers: [
-            	{text: 'Januar', value: 'januar'},
-    		{text: 'Februar', value: 'februar'},
-		{text: 'Marec', value: 'marec'},
-		{text: 'April', value: 'april'},
-		{text: 'Maj', value: 'maj'},
-		{text: 'Junij', value: 'junij'},
-		{text: 'Julij', value: 'julij'},
-		{text: 'Avgust', value: 'avgust'},
-		{text: 'September', value: 'september'},
-		{text: 'Oktober', value: 'oktober'},
-		{text: 'November', value: 'november'},
-		{text: 'December', value: 'december'}
+            	{text: 'januar', value: 'januar'},
+    		{text: 'februar', value: 'februar'},
+		{text: 'marec', value: 'marec'},
+		{text: 'april', value: 'april'},
+		{text: 'maj', value: 'maj'},
+		{text: 'junij', value: 'junij'},
+		{text: 'julij', value: 'julij'},
+		{text: 'avgust', value: 'avgust'},
+		{text: 'september', value: 'september'},
+		{text: 'oktober', value: 'oktober'},
+		{text: 'november', value: 'november'},
+		{text: 'december', value: 'december'}
             ]
     });
 	
@@ -198,10 +198,10 @@ define(['questAPI'], function(Quest){
 	        name: 'gender_Identity',
 	        stem: 'Kakšna je vaša spolna identiteta?',
 	        answers: [
-	            {text: 'Moški', value: 'moski'},
-	            {text: 'Ženska', value: 'zenska'},
-	            {text: 'Nebinarna oseba', value: 'nebinarna'},
-	            {text: 'Drugo', value: 'drugo'}
+	            {text: 'moški', value: 'moski'},
+	            {text: 'ženska', value: 'zenska'},
+	            {text: 'nebinarna oseba', value: 'nebinarna'},
+	            {text: 'drugo', value: 'drugo'}
 	        ]
 	});
 	
@@ -210,14 +210,14 @@ define(['questAPI'], function(Quest){
 		name:'transgender',
 		stem:'Ali ste transspolna oseba?',
 		answers: [
-			'Da', 'Ne', 'Ne vem'
+			'da', 'ne', 'ne vem'
         	]
 	});
         
 	API.addQuestionsSet('citizenship', {
 		inherit:'basicDropdown',
 		name:'citizenship',
-		stem:'Katero je vaše primarno državljanstvo',
+		stem:'Katero je vaše primarno državljanstvo?',
 		answers: [
 	        	{text: 'Afghanistan', value: 'Afghanistan'},
 	        	{text: 'Albania', value: 'Albania'},
